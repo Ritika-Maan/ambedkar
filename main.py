@@ -34,6 +34,7 @@ class Source(BaseModel):
     title: Optional[str] = None
     type: Optional[str] = None
     relevance: Optional[str] = None
+    section: Optional[int] = None
 
 
 class AskResponse(BaseModel):

@@ -118,10 +118,14 @@ def format_context(chunks: list[dict]) -> str:
         if m.get("source") == "debates":
             citation = f"(CAD Vol. {m.get('volume', '?')}, {m.get('date', '?')})"
         else:
-            page = m.get("page_or_session") or "n/a"
-            citation = f"(Writings, Vol. {m.get('volume', '?')}, p. {page})"
+            title = m.get("title") or "Untitled"
+            chunk_idx = m.get("chunk_index")
+            if chunk_idx is not None:
+                citation = f"(Writings, \"{title}\", Vol. {m.get('volume', '?')}, section {chunk_idx + 1})"
+            else:
+                citation = f"(Writings, \"{title}\", Vol. {m.get('volume', '?')})"
         lines.append(
-            f"{tag} Chunk {i+1} — USE EXACTLY THIS CITATION: {citation}\n{c['text']}"
+            f"{tag} Source #{i+1} — USE EXACTLY THIS CITATION: {citation}\n{c['text']}"
         )
     return "\n\n".join(lines)
 
@@ -176,6 +180,7 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
                 "title": c["metadata"].get("title"),
                 "type": c["metadata"].get("record_type", "source_text"),
                 "relevance": "high" if c["distance"] < 0.8 else "medium" if c["distance"] < 1.2 else "low",
+                "section": c["metadata"].get("chunk_index"),
             }
             for c in chunks
         ],
