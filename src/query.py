@@ -36,16 +36,45 @@ MODE_PROMPTS = {
     ),
 }
 
+LANG_PROMPTS = {
+    "en": "Respond in English.",
+    "hi": "Respond entirely in Hindi (Devanagari script). Keep citations like (CAD Vol. X, date) exactly as given, in their original Roman form — never translate citation text. Always render 'Ambedkar' as 'आंबेडकर' or 'अम्बेडकर' consistently, never any other name. Do not use quotation marks around any word or phrase — nothing in this archive is a verified verbatim quote.",
+    "mr": "Respond entirely in Marathi (Devanagari script). Keep citations like (CAD Vol. X, date) exactly as given, in their original Roman form — never translate citation text. Always render 'Ambedkar' as 'आंबेडकर', never any other name — double-check this before finalizing your answer. Do not use quotation marks around any word or phrase — nothing in this archive is a verified verbatim quote.",
+    "ta": "Respond entirely in Tamil script, using the standard constitutional-Tamil term அடிப்படை உரிமைகள் for 'fundamental rights' (not மூல உரிமைகள்). Keep citations like (CAD Vol. X, date) exactly as given, in their original Roman form — never translate citation text. Always render 'Ambedkar' as 'அம்பேத்கர்'. Do not use quotation marks around any word or phrase — nothing in this archive is a verified verbatim quote.Do not use quotation marks around translated or paraphrased terms.Do not repeat the same phrase or clause twice in one answer — if you notice yourself repeating, rephrase once and stop.",
+}
+
+NOT_IN_ARCHIVE = {
+    "en": "This isn't in the archive yet.",
+    "hi": "यह अभी संग्रह में उपलब्ध नहीं है।",
+    "mr": "हे अद्याप संग्रहात उपलब्ध नाही.",
+    "ta": "இது இன்னும் காப்பகத்தில் இல்லை.",
+}
+
+GEN_UNAVAILABLE = {
+    "en": "Answer generation is temporarily unavailable, but here's what the archive found relevant to your question — see sources below.",
+    "hi": "उत्तर तैयार करना अस्थायी रूप से उपलब्ध नहीं है, लेकिन संग्रह में आपके प्रश्न से संबंधित यह सामग्री मिली — नीचे स्रोत देखें।",
+    "mr": "उत्तर तयार करणे तात्पुरते उपलब्ध नाही, पण संग्रहात तुमच्या प्रश्नाशी संबंधित खालील माहिती सापडली — खालील स्रोत पहा.",
+    "ta": "பதில் உருவாக்கம் தற்காலிகமாகக் கிடைக்கவில்லை, ஆனால் காப்பகத்தில் உங்கள் கேள்விக்குத் தொடர்புடையவை கிடைத்தன — கீழே மூலங்களைப் பார்க்கவும்.",
+}
+
+NOT_IN_ARCHIVE_AND_UNAVAILABLE = {
+    "en": "This isn't in the archive yet, and generation is temporarily unavailable.",
+    "hi": "यह अभी संग्रह में नहीं है, और उत्तर तैयार करना भी अस्थायी रूप से उपलब्ध नहीं है।",
+    "mr": "हे अद्याप संग्रहात नाही, आणि उत्तर तयार करणे तात्पुरते उपलब्ध नाही.",
+    "ta": "இது இன்னும் காப்பகத்தில் இல்லை, மேலும் பதில் உருவாக்கமும் தற்காலிகமாகக் கிடைக்கவில்லை.",
+}
+
 SYSTEM_PROMPT_TEMPLATE = """You are "Ask Ambedkar", part of a Digital Heritage Archive for Dr. B.R. Ambedkar, built for the Ministry of Social Justice & Empowerment.
 
 STRICT RULES — follow all of them:
 1. Answer ONLY using the retrieved context chunks provided below. Never use outside knowledge about Ambedkar, the Constitution, or Indian history, even if you know it.
-2. If the retrieved chunks do not contain information relevant to the question, respond exactly: "This isn't in the archive yet." Do not guess, infer, or fill gaps.
-3. Every claim must be followed by a citation in the format (CAD Vol. <volume>, <date>) or (Writings, Vol. <volume>, p. <page>), matching the metadata of the chunk it came from. Use the exact citation string given for each chunk — do not construct your own.
+2. If the retrieved chunks do not contain information relevant to the question, respond exactly: "{not_in_archive}". Do not guess, infer, or fill gaps.
+3. Every claim must be followed by a citation in the format (CAD Vol. <volume>, <date>) or (Writings, Vol. <volume>, p. <page>), matching the metadata of the chunk it came from. Use the exact citation string given for each chunk — do not construct your own. Citations stay in their original Roman form regardless of response language.
 4. Some retrieved chunks are marked as SUMMARIES, not verbatim speech text. When you draw on a summary chunk, phrase your answer as reporting what Ambedkar addressed/argued/explained — never as a direct quotation, and never put words in quotation marks that aren't an exact quote from the source.
 5. Never fabricate a citation. If you're unsure which chunk supports a claim, don't make the claim.
 
 {mode_instruction}
+{lang_instruction}
 
 --- RETRIEVED CONTEXT ---
 {context}
@@ -98,10 +127,14 @@ def format_context(chunks: list[dict]) -> str:
 
 
 def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = "both",
-         history: list[dict] | None = None) -> dict:
+         history: list[dict] | None = None, lang: str = "en") -> dict:
     mode = mode.lower()
     if mode not in MODE_PROMPTS:
         mode = "student"
+    lang = lang.lower()
+    if lang not in LANG_PROMPTS:
+        lang = "en"
+
     retrieval_query = question
     if history:
         last_user_msgs = [h["content"] for h in history if h.get("role") == "user"]
@@ -110,12 +143,15 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
     chunks = retrieve(retrieval_query, n_results=n_results, corpus=corpus)
     context = format_context(chunks)
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
-        mode_instruction=MODE_PROMPTS[mode], context=context
+        mode_instruction=MODE_PROMPTS[mode],
+        lang_instruction=LANG_PROMPTS[lang],
+        not_in_archive=NOT_IN_ARCHIVE[lang],
+        context=context,
     )
 
     messages = [{"role": "system", "content": system_prompt}]
     if history:
-        messages.extend(history)  # [{"role": "user"/"assistant", "content": "..."}]
+        messages.extend(history)
     messages.append({"role": "user", "content": question})
 
     try:
@@ -127,17 +163,12 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
         answer = response.choices[0].message.content
     except Exception as e:
         print(f"[ask] Groq call failed: {e}")
-        if chunks:
-            answer = (
-                "Answer generation is temporarily unavailable, but here's what "
-                "the archive found relevant to your question — see sources below."
-            )
-        else:
-            answer = "This isn't in the archive yet, and generation is temporarily unavailable."
+        answer = GEN_UNAVAILABLE[lang] if chunks else NOT_IN_ARCHIVE_AND_UNAVAILABLE[lang]
 
     return {
         "answer": answer,
         "mode": mode,
+        "lang": lang,
         "sources": [
             {
                 "date": c["metadata"].get("date"),

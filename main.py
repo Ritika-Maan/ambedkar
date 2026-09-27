@@ -25,6 +25,7 @@ class AskRequest(BaseModel):
     n_results: int = Field(5, ge=1, le=20)
     corpus: Literal["debates", "writings", "both"] = "both"
     history: list[dict] = Field(default_factory=list, description="Prior turns: [{'role': 'user'/'assistant', 'content': '...'}]")
+    lang: Literal["en", "hi", "mr", "ta"] = "en"
 
 
 class Source(BaseModel):
@@ -39,6 +40,7 @@ class AskResponse(BaseModel):
     answer: str
     mode: str
     sources: list[Source]
+    lang: str
 
 
 @app.get("/")
@@ -48,18 +50,18 @@ def health():
 import hashlib
 _cache = {}
 
-def _cache_key(question, mode, corpus, n_results, history=None):
-    raw = f"{question.strip().lower()}|{mode}|{corpus}|{n_results}|{history or []}"
+def _cache_key(question, mode, corpus, n_results, history=None, lang="en"):
+    raw = f"{question.strip().lower()}|{mode}|{corpus}|{n_results}|{history or []}|{lang}"
     return hashlib.md5(raw.encode()).hexdigest()
 
 @app.post("/ask", response_model=AskResponse)
 def ask_endpoint(req: AskRequest):
-    key = _cache_key(req.question, req.mode, req.corpus, req.n_results, req.history)
+    key = _cache_key(req.question, req.mode, req.corpus, req.n_results, req.history, req.lang)
     if key in _cache:
         return _cache[key]
     try:
         result = ask(question=req.question, mode=req.mode, n_results=req.n_results,
-                      corpus=req.corpus, history=req.history)
+                      corpus=req.corpus, history=req.history, lang=req.lang)
     except Exception as e:
         print(f"[/ask] error: {e}")
         raise HTTPException(status_code=500, detail="Something went wrong generating the answer.")
