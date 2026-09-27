@@ -4,6 +4,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Literal, Optional
+from src.ingest import debates_collection
 
 sys.path.insert(0, os.path.dirname(__file__))
 from src.query import ask  # reuses the exact same ask() tested in the console
@@ -107,3 +108,48 @@ def compare_endpoint(req: CompareRequest):
         "a": {"date": req.date_a, **result_a},
         "b": {"date": req.date_b, **result_b},
     }
+
+@app.get("/debates-search")
+def debates_search(date: str = None, volume: str = None, topic: str = None, limit: int = 20):
+    where_clause = {}
+    if date and volume:
+        where_clause = {"$and": [{"date": date}, {"volume": volume}]}
+    elif date:
+        where_clause = {"date": date}
+    elif volume:
+        where_clause = {"volume": volume}
+
+    if where_clause:
+        results = debates_collection.get(where=where_clause)
+    else:
+        results = debates_collection.get()
+
+    rows = list(zip(results["ids"], results["documents"], results["metadatas"]))
+
+    if topic:
+        topic_lower = topic.lower()
+        rows = [
+            r for r in rows
+            if topic_lower in (r[2].get("title") or "").lower()
+            or topic_lower in r[1].lower()
+        ]
+
+    rows = rows[:limit]
+
+    return {
+        "results": [
+            {
+                "id": r[0],
+                "title": r[2].get("title"),
+                "date": r[2].get("date"),
+                "volume": r[2].get("volume"),
+                "snippet": (r[1][:300] + "...") if len(r[1]) > 300 else r[1],
+            }
+            for r in rows
+        ]
+    }
+
+@app.get("/graph-data")
+def graph_data():
+    # Stub — real data comes once Shreya hands off her node/edge JSON.
+    return {"nodes": [], "edges": [], "status": "not yet available"}
