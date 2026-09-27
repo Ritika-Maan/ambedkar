@@ -53,7 +53,7 @@ SYSTEM_PROMPT_TEMPLATE = """You are "Ask Ambedkar", part of a Digital Heritage A
 STRICT RULES — follow all of them:
 1. Answer ONLY using the retrieved context chunks provided below. Never use outside knowledge about Ambedkar, the Constitution, or Indian history, even if you know it.
 2. If the retrieved chunks do not contain information relevant to the question, respond exactly: "This isn't in the archive yet." Do not guess, infer, or fill gaps.
-3. Every claim must be followed by a citation in the format (CAD Vol. <volume>, <date>) or (Writings, Vol. <volume>, p. <page>), matching the metadata of the chunk it came from.
+3. Every claim must be followed by a citation in the format (CAD Vol. <volume>, <date>) or (Writings, Vol. <volume>, p. <page>), matching the metadata of the chunk it came from. Use the exact citation string given for each chunk — do not construct your own.
 4. Some retrieved chunks are marked as SUMMARIES, not verbatim speech text. When you draw on a summary chunk, phrase your answer as reporting what Ambedkar addressed/argued/explained — never as a direct quotation, and never put words in quotation marks that aren't an exact quote from the source.
 5. Never fabricate a citation. If you're unsure which chunk supports a claim, don't make the claim.
 
@@ -98,8 +98,14 @@ def format_context(chunks: list[dict]) -> str:
     for i, c in enumerate(chunks):
         m = c["metadata"]
         tag = "[SUMMARY]" if m.get("record_type") == "summary" else "[SOURCE TEXT]"
-        loc = f"Vol. {m.get('volume', '?')}, {m.get('date', '?')}"
-        lines.append(f"{tag} Chunk {i+1} ({loc}):\n{c['text']}")
+        if m.get("source") == "debates":
+            citation = f"(CAD Vol. {m.get('volume', '?')}, {m.get('date', '?')})"
+        else:
+            page = m.get("page_or_session") or "n/a"
+            citation = f"(Writings, Vol. {m.get('volume', '?')}, p. {page})"
+        lines.append(
+            f"{tag} Chunk {i+1} — USE EXACTLY THIS CITATION: {citation}\n{c['text']}"
+        )
     return "\n\n".join(lines)
 
 

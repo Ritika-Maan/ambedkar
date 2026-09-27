@@ -1,7 +1,19 @@
 """
 Structured Constituent Assembly Debate interventions, transcribed from
-Niyati's sourced PDFs (04 Nov 1948, 29 Nov 1948, 02 Dec 1948, 24 Aug 1949,
-26 Aug 1949 — Vol VII and Vol IX).
+Niyati's sourced material.
+
+BATCH 1 (30 records): 04 Nov 1948, 29 Nov 1948, 02 Dec 1948, 24 Aug 1949,
+26 Aug 1949 — Vol VII and Vol IX.
+
+BATCH 2 (46 records): expands coverage to new dates across Vol VII, IX,
+and two brand-new volumes — VIII and XI (including the Constitution's
+Third Reading / final adoption on 17 Nov 1949). Extracted from Niyati's
+docx table.
+
+NOTE on Batch 2: the source table had one duplicate row (identical date,
+title and summary — "Third Reading", 17 Nov 1949, Vol XI, appearing at
+both s.no 37 and s.no 47). The duplicate has been removed here; flag to
+Niyati to confirm this was a copy-paste slip, not two distinct events.
 
 IMPORTANT: these are SUMMARIES of each intervention, not verbatim speech
 text. RAG citations built from this data must be phrased as summaries
@@ -11,6 +23,10 @@ mentioned = node, interaction = edge, theme = category).
 """
 
 INTERVENTIONS = [
+    # ============================================================
+    # BATCH 1 — original 30 records
+    # ============================================================
+
     # --- 04 Nov 1948, Vol VII ---
     dict(date="1948-11-04", volume="VII", title="Introduction of Draft Constitution",
          mentioned="Drafting Committee",
@@ -140,4 +156,219 @@ INTERVENTIONS = [
          mentioned="Advisory Committee / Drafting Committee",
          summary="Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards.",
          theme="Constitution/Minorities"),
+
+    # ============================================================
+    # BATCH 2 — 46 new records (47 minus the confirmed duplicate,
+    # s.no 47, which was identical to s.no 37)
+    # ============================================================
+
+    # --- 04 Nov 1948, Vol VII (additional interventions same day) ---
+    dict(date="1948-11-04", volume="VII", title="Amendment procedure",
+         mentioned="Constitution",
+         summary="Distinguished the Constituent Assembly from future Parliament when discussing constitutional amendment powers.",
+         theme="Constitution"),
+    dict(date="1948-11-04", volume="VII", title="Strong Centre",
+         mentioned="Federalism",
+         summary="Explained the constitutional reasoning behind giving significant powers to the Union",
+         theme="Federalism"),
+    dict(date="1948-11-04", volume="VII", title="Comparative constitutions",
+         mentioned="Constitutional Design",
+         summary="Responded to criticism concerning the use of constitutional ideas from other countries",
+         theme="Constitutional Design"),
+    dict(date="1948-11-04", volume="VII", title="Status of Directive Principles",
+         mentioned="Directive Principles",
+         summary="Explained their role even though they were not directly enforceable by courts.",
+         theme="Directive Principles"),
+    dict(date="1948-11-04", volume="VII", title="Union-State powers",
+         mentioned="Federalism",
+         summary="Explained federalism as a division of legislative and executive powers between Union and States",
+         theme="Federalism"),
+
+    # --- 23 Nov 1948, Vol VII ---
+    dict(date="1948-11-23", volume="VII", title="Uniform Civil Code",
+         mentioned="Religion",
+         summary="Responded to arguments concerning a common civil code and its relationship with religious communities",
+         theme="Religion"),
+    dict(date="1948-11-23", volume="VII", title="Personal law",
+         mentioned="Religion",
+         summary="Discussed the constitutional treatment of personal laws and religious practices",
+         theme="Religion"),
+    dict(date="1948-11-23", volume="VII", title="Freedom of religion",
+         mentioned="Fundamental Rights",
+         summary="Addressed the relationship between religious freedom and constitutional limitations",
+         theme="Fundamental Rights"),
+
+    # --- 02 Dec 1948, Vol VII (additional) ---
+    dict(date="1948-12-02", volume="VII", title="Freedom of the press",
+         mentioned="Press Freedom",
+         summary="Explained that the press did not require a separate fundamental right because press activity was covered by citizens' freedom of expression.",
+         theme="Press Freedom"),
+    dict(date="1948-12-02", volume="VII", title="Right to bear arms",
+         mentioned="Civil Liberties",
+         summary="Responded to H. V. Kamath's argument and explained why a general constitutional right to bear arms was not being provided",
+         theme="Civil Liberties"),
+    dict(date="1948-12-02", volume="VII", title="Reasonable restrictions",
+         mentioned="Fundamental Rights",
+         summary="Discussed the circumstances in which rights could be subject to restrictions",
+         theme="Fundamental Rights"),
+
+    # --- 09 Dec 1948, Vol VII ---
+    dict(date="1948-12-09", volume="VII", title="Writ jurisdiction",
+         mentioned="Constitutional Remedies",
+         summary="Defended the constitutional provision for remedies to enforce Fundamental Rights",
+         theme="Constitutional Remedies"),
+    dict(date="1948-12-09", volume="VII", title="Habeas Corpus / Mandamus",
+         mentioned="Judiciary",
+         summary="Explained the relationship between existing legal remedies and the constitutional remedies being created.",
+         theme="Judiciary"),
+    dict(date="1948-12-09", volume="VII", title="Protection against legislative majorities",
+         mentioned="Fundamental Rights",
+         summary="Explained why constitutional remedies were important for protecting rights against ordinary legislative action.",
+         theme="Fundamental Rights"),
+
+    # --- 12 Aug 1949, Vol IX ---
+    dict(date="1949-08-12", volume="IX", title="Migration from Pakistan",
+         mentioned="Citizenship",
+         summary="Responded to criticism that the proposed citizenship provisions made citizenship too easy to obtain",
+         theme="Citizenship"),
+    dict(date="1949-08-12", volume="IX", title="Assam migration",
+         mentioned="Citizenship",
+         summary="Explained the special treatment of persons entering Assam before and after 19 July 1948.",
+         theme="Citizenship"),
+    dict(date="1949-08-12", volume="IX", title="Citizenship registration",
+         mentioned="Citizenship",
+         summary="Explained the requirement of application, residence and registration for certain migrants entering Assam after the specified date.",
+         theme="Citizenship"),
+
+    # --- 19 May 1949, Vol VIII (new volume) ---
+    dict(date="1949-05-19", volume="VIII", title="Loss of citizenship",
+         mentioned="Citizenship",
+         summary="Proposed provisions concerning people who ceased to be Indian citizens or voluntarily acquired foreign citizenship.",
+         theme="Citizenship"),
+    dict(date="1949-05-19", volume="VIII", title="Foreign allegiance",
+         mentioned="Citizenship",
+         summary="Addressed constitutional consequences of allegiance or citizenship of a foreign state",
+         theme="Citizenship"),
+
+    # --- 23 May 1949, Vol VIII ---
+    dict(date="1949-05-23", volume="VIII", title="Nominated members",
+         mentioned="Parliament",
+         summary="Explained the proposed nomination of persons with expertise in areas such as literature, science, arts and social service.",
+         theme="Parliament"),
+    dict(date="1949-05-23", volume="VIII", title="Duplicate nomination provisions",
+         mentioned="Parliament",
+         summary="Proposed withdrawal of a provision because an existing constitutional provision already served the same purpose.",
+         theme="Parliament"),
+
+    # --- 10 Jun 1949, Vol VIII ---
+    dict(date="1949-06-10", volume="VIII", title="Constituent Assembly as Legislature",
+         mentioned="Legislature",
+         summary="Explained the distinction between the Assembly functioning as the Constituent Assembly and as the legislature",
+         theme="Legislature"),
+    dict(date="1949-06-10", volume="VIII", title="Dominion of India",
+         mentioned="Constitutional Terminology",
+         summary="Defended retaining terminology consistent with the Indian Independence Act",
+         theme="Constitutional Terminology"),
+
+    # --- 08 Aug 1949, Vol IX ---
+    dict(date="1949-08-08", volume="IX", title="Constitutional procedure",
+         mentioned="Legislature",
+         summary="Participated in discussion of provisions governing the legislature and constitutional procedure.",
+         theme="Legislature"),
+
+    # --- 25 Nov 1949, Vol XI (new volume) ---
+    dict(date="1949-11-25", volume="XI", title="Working of the Constitution",
+         mentioned="Constitutional Morality",
+         summary="Explained that the effectiveness of a Constitution depends significantly on how it is actually worked",
+         theme="Constitutional Morality"),
+    dict(date="1949-11-25", volume="XI", title="Political democracy",
+         mentioned="Democracy",
+         summary="Discussed the relationship between constitutional government and democratic functioning",
+         theme="Democracy"),
+    dict(date="1949-11-25", volume="XI", title="Liberty, Equality, Fraternity",
+         mentioned="Social Democracy",
+         summary="Connected political democracy with the principles of liberty, equality and fraternity.",
+         theme="Social Democracy"),
+    dict(date="1949-11-25", volume="XI", title="Limitations on rights",
+         mentioned="Fundamental Rights",
+         summary="Discussed the argument that Fundamental Rights should be absolute and the constitutional approach to limitations.",
+         theme="Fundamental Rights"),
+    dict(date="1949-11-25", volume="XI", title="Socialism / Property rights",
+         mentioned="Property",
+         summary="Responded to arguments concerning nationalisation, socialisation of private property and compensation.",
+         theme="Property"),
+    dict(date="1949-11-25", volume="XI", title="Emergency powers",
+         mentioned="Federalism",
+         summary="Explained the rationale for overriding Union powers in emergencies and the interests of the country as a whole.",
+         theme="Federalism"),
+    dict(date="1949-11-25", volume="XI", title="Party discipline",
+         mentioned="Political Parties",
+         summary="Reflected on the role of party discipline and independent/rebellious members during constitution-making.",
+         theme="Political Parties"),
+    dict(date="1949-11-25", volume="XI", title="Role of opposition",
+         mentioned="Constitution-making",
+         summary="Acknowledged the contribution of members whose criticisms challenged the Drafting Committee.",
+         theme="Constitution-making"),
+    dict(date="1949-11-25", volume="XI", title="Future Parliament",
+         mentioned="Constitutional Amendment",
+         summary="Distinguished the amendment powers of the future Parliament from those of the Constituent Assembly.",
+         theme="Constitutional Amendment"),
+    dict(date="1949-11-25", volume="XI", title="Future generations",
+         mentioned="Constitution",
+         summary="Discussed the difficulty of constitution-makers binding future generations through constitutional provisions.",
+         theme="Constitution"),
+    dict(date="1949-11-25", volume="XI", title="Union authority",
+         mentioned="National Unity",
+         summary="Explained why certain overriding Union powers were considered necessary for national interests.",
+         theme="National Unity"),
+    dict(date="1949-11-25", volume="XI", title="Constitutional implementation",
+         mentioned="Constitutional Government",
+         summary="Emphasised the importance of the people and institutions responsible for operating the Constitution.",
+         theme="Constitutional Government"),
+    dict(date="1949-11-25", volume="XI", title="Future of independence",
+         mentioned="Independence",
+         summary="Reflected on whether India would maintain its independence after becoming a Republic.",
+         theme="Independence"),
+
+    # --- 17 Nov 1949, Vol XI (Third Reading / final adoption) ---
+    dict(date="1949-11-17", volume="XI", title="Third Reading",
+         mentioned="Constitution",
+         summary="Moved the motion that the Constitution as settled by the Assembly be passed.",
+         theme="Constitution"),
+    dict(date="1949-11-17", volume="XI", title="Final adoption process",
+         mentioned="Constitution-making",
+         summary="Participated in the final-stage discussion of the Constitution before adoption.",
+         theme="Constitution-making"),
+    dict(date="1949-11-17", volume="XI", title="Equal opportunities",
+         mentioned="Equality",
+         summary="The debate included discussion of equal opportunities for different classes and sections of Indian society.",
+         theme="Equality"),
+
+    # --- 06 Sep 1949, Vol IX ---
+    dict(date="1949-09-06", volume="IX", title="Sixth Schedule",
+         mentioned="Scheduled Areas",
+         summary="Proposed reducing the maximum membership of District/Regional Councils from forty to twenty-four.",
+         theme="Scheduled Areas"),
+    dict(date="1949-09-06", volume="IX", title="Constituencies",
+         mentioned="Tribal Administration",
+         summary="Proposed leaving delimitation of constituencies to rules rather than fixing the details directly in the Constitution.",
+         theme="Tribal Administration"),
+    dict(date="1949-09-06", volume="IX", title="Council membership",
+         mentioned="Tribal Administration",
+         summary="Proposed adding the term of office of members of the relevant councils to the Sixth Schedule",
+         theme="Tribal Administration"),
+
+    # --- 15 Sep 1949, Vol IX ---
+    dict(date="1949-09-15", volume="IX", title="Article 15",
+         mentioned="Fundamental Rights",
+         summary="Revisited the earlier debate over \u201cdue process\u201d versus \u201cprocedure established by law.\u201d",
+         theme="Fundamental Rights"),
+    dict(date="1949-09-15", volume="IX", title="Arrest",
+         mentioned="Personal Liberty",
+         summary="Explained concerns that Article 15, without additional safeguards, could permit Parliament broad power concerning arrest",
+         theme="Personal Liberty"),
+    dict(date="1949-09-15", volume="IX", title="Article 15A",
+         mentioned="Personal Liberty",
+         summary="Explained the proposed Article 15A as providing safeguards associated with due process.",
+         theme="Personal Liberty"),
 ]
