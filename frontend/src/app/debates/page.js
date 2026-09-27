@@ -12,26 +12,42 @@ export default function DebatesPage() {
   const [error, setError] = useState(null);
   const [results, setResults] = useState(null);
   const router = useRouter();
+  const [slow, setSlow] = useState(false);
 
-  async function handleSearch(e) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    try {
-      const params = new URLSearchParams();
-      if (date) params.set("date", date);
-      if (volume) params.set("volume", volume);
-      if (topic) params.set("topic", topic);
-      const res = await fetch(`${API_BASE}/debates-search?${params.toString()}`);
-      if (!res.ok) throw new Error(`Server returned ${res.status}`);
-      const data = await res.json();
-      setResults(data.results);
-    } catch (err) {
+async function handleSearch(e) {
+  e.preventDefault();
+  setLoading(true);
+  setError(null);
+  setSlow(false);
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  const slowTimer = setTimeout(() => setSlow(true), 6000);
+
+  try {
+    const params = new URLSearchParams();
+    if (date) params.set("date", date);
+    if (volume) params.set("volume", volume);
+    if (topic) params.set("topic", topic);
+    const res = await fetch(`${API_BASE}/debates-search?${params.toString()}`, {
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`Server returned ${res.status}`);
+    const data = await res.json();
+    setResults(data.results);
+  } catch (err) {
+    if (err.name === "AbortError") {
+      setError("The archive is taking too long to respond. Try again, or check the backend is running.");
+    } else {
       setError(err.message || "Something went wrong. Is the backend running on :8000?");
-    } finally {
-      setLoading(false);
     }
+  } finally {
+    clearTimeout(timeoutId);
+    clearTimeout(slowTimer);
+    setSlow(false);
+    setLoading(false);
   }
+}
 
   function askAboutThis(title) {
     router.push(`/ask?q=${encodeURIComponent(`Tell me about ${title}`)}`);
@@ -73,7 +89,7 @@ export default function DebatesPage() {
           />
         </label>
         <button type="submit" disabled={loading} style={{ padding: "0.5rem 1rem", fontWeight: 600 }}>
-          {loading ? "Searching..." : "Search"}
+          {loading ? (slow ? "Still searching... (archive is slow right now)" : "Searching...") : "Search"}
         </button>
       </form>
 
