@@ -1,16 +1,4 @@
-"""
-Retrieval + generation for the Ask Ambedkar / Debates Explorer RAG pipeline.
 
-query -> retrieve top-k chunks from ChromaDB -> LLM (Grok, via OpenAI-
-compatible API) with a strict citation-enforcing system prompt -> cited
-answer, or an explicit "not in the archive" fallback.
-
-Requires: GROQ_API_KEY environment variable (get one free at
-https://console.groq.com/keys — note this is Groq, the fast-inference
-company, NOT Grok/xAI; Groq keys start with "gsk_"). Put it in a .env
-file in the project root:
-    GROQ_API_KEY=gsk_xxxxxxxxxxxx
-"""
 import os
 import sys
 from openai import OpenAI
@@ -109,30 +97,43 @@ def format_context(chunks: list[dict]) -> str:
     return "\n\n".join(lines)
 
 
-def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = "both") -> dict:
-    """
-    Full RAG call: retrieve -> build prompt -> generate -> return answer + sources.
-    """
+def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = "both",
+         history: list[dict] | None = None) -> dict:
     mode = mode.lower()
     if mode not in MODE_PROMPTS:
         mode = "student"
-
-    chunks = retrieve(question, n_results=n_results, corpus=corpus)
+    retrieval_query = question
+    if history:
+        last_user_msgs = [h["content"] for h in history if h.get("role") == "user"]
+        if last_user_msgs:
+            retrieval_query = f"{last_user_msgs[-1]} {question}"
+    chunks = retrieve(retrieval_query, n_results=n_results, corpus=corpus)
     context = format_context(chunks)
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
         mode_instruction=MODE_PROMPTS[mode], context=context
     )
 
-    response = client.chat.completions.create(
-        model=GROQ_MODEL,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": question},
-        ],
-        temperature=0.2,  # low temperature — this is a citation-grounded task, not creative writing
-    )
+    messages = [{"role": "system", "content": system_prompt}]
+    if history:
+        messages.extend(history)  # [{"role": "user"/"assistant", "content": "..."}]
+    messages.append({"role": "user", "content": question})
 
-    answer = response.choices[0].message.content
+    try:
+        response = client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=messages,
+            temperature=0.2,
+        )
+        answer = response.choices[0].message.content
+    except Exception as e:
+        print(f"[ask] Groq call failed: {e}")
+        if chunks:
+            answer = (
+                "Answer generation is temporarily unavailable, but here's what "
+                "the archive found relevant to your question — see sources below."
+            )
+        else:
+            answer = "This isn't in the archive yet, and generation is temporarily unavailable."
 
     return {
         "answer": answer,
@@ -143,6 +144,7 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
                 "volume": c["metadata"].get("volume"),
                 "title": c["metadata"].get("title"),
                 "type": c["metadata"].get("record_type", "source_text"),
+                "relevance": "high" if c["distance"] < 0.8 else "medium" if c["distance"] < 1.2 else "low",
             }
             for c in chunks
         ],

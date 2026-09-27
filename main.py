@@ -1,17 +1,3 @@
-"""
-FastAPI wrapper for the Ambedkar RAG pipeline.
-Exposes POST /ask so Nalini's backend (or Priya's frontend directly,
-in dev) can call retrieval+generation over HTTP instead of importing
-query.py directly.
-
-Run:
-    uvicorn main:app --reload --port 8000
-
-Test:
-    curl -X POST http://localhost:8000/ask \
-      -H "Content-Type: application/json" \
-      -d '{"question": "what did Ambedkar say about federalism?", "mode": "scholar"}'
-"""
 import sys
 import os
 from fastapi import FastAPI, HTTPException
@@ -38,6 +24,7 @@ class AskRequest(BaseModel):
     mode: Literal["student", "scholar", "constitutional"] = "student"
     n_results: int = Field(5, ge=1, le=20)
     corpus: Literal["debates", "writings", "both"] = "both"
+    history: list[dict] = Field(default_factory=list, description="Prior turns: [{'role': 'user'/'assistant', 'content': '...'}]")
 
 
 class Source(BaseModel):
@@ -45,6 +32,7 @@ class Source(BaseModel):
     volume: Optional[str] = None
     title: Optional[str] = None
     type: Optional[str] = None
+    relevance: Optional[str] = None
 
 
 class AskResponse(BaseModel):
@@ -57,19 +45,62 @@ class AskResponse(BaseModel):
 def health():
     return {"status": "ok", "service": "ask-ambedkar"}
 
+import hashlib
+_cache = {}
+
+def _cache_key(question, mode, corpus, n_results, history=None):
+    raw = f"{question.strip().lower()}|{mode}|{corpus}|{n_results}|{history or []}"
+    return hashlib.md5(raw.encode()).hexdigest()
 
 @app.post("/ask", response_model=AskResponse)
 def ask_endpoint(req: AskRequest):
+    key = _cache_key(req.question, req.mode, req.corpus, req.n_results, req.history)
+    if key in _cache:
+        return _cache[key]
     try:
-        result = ask(
-            question=req.question,
-            mode=req.mode,
-            n_results=req.n_results,
-            corpus=req.corpus,
-        )
+        result = ask(question=req.question, mode=req.mode, n_results=req.n_results,
+                      corpus=req.corpus, history=req.history)
     except Exception as e:
-        # Don't leak internals (API keys, stack traces) to the frontend —
-        # log server-side, return a clean 500 to the client.
         print(f"[/ask] error: {e}")
         raise HTTPException(status_code=500, detail="Something went wrong generating the answer.")
+    _cache[key] = result
     return result
+
+@app.get("/timeline")
+def timeline():
+    from data.debates.interventions import INTERVENTIONS
+    sorted_events = sorted(INTERVENTIONS, key=lambda r: r["date"])
+    dates = sorted(set(r["date"] for r in INTERVENTIONS))
+    return {"dates": dates, "events": sorted_events}
+
+class CompareRequest(BaseModel):
+    question: str = Field(..., min_length=1)
+    date_a: str = Field(..., description="e.g. 1948-11-04")
+    date_b: str = Field(..., description="e.g. 1949-11-25")
+    mode: Literal["student", "scholar", "constitutional"] = "student"
+
+
+class CompareSide(BaseModel):
+    date: str
+    answer: str
+    mode: str
+    sources: list[Source]
+
+
+class CompareResponse(BaseModel):
+    a: CompareSide
+    b: CompareSide
+
+
+@app.post("/compare", response_model=CompareResponse)
+def compare_endpoint(req: CompareRequest):
+    try:
+        result_a = ask(f"{req.question} (in the context of {req.date_a})", mode=req.mode)
+        result_b = ask(f"{req.question} (in the context of {req.date_b})", mode=req.mode)
+    except Exception as e:
+        print(f"[/compare] error: {e}")
+        raise HTTPException(status_code=500, detail="Something went wrong generating the comparison.")
+    return {
+        "a": {"date": req.date_a, **result_a},
+        "b": {"date": req.date_b, **result_b},
+    }
