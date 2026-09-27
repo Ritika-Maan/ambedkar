@@ -116,7 +116,14 @@ async function handleAsk(e) {
 
       {result && (
         <div style={{ marginTop: "2rem" }}>
-          <h3>Answer ({result.mode}, {result.lang})</h3>
+            <h3>
+                Answer ({result.mode}, {result.lang})
+                {result.cached && (
+                    <span style={{ marginLeft: "0.75rem", fontSize: "0.7em", fontWeight: 400, color: "#888", border: "1px solid #ccc", borderRadius: "4px", padding: "1px 6px" }}>
+                        cached
+                    </span>
+                )}
+            </h3>
           <p style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>{result.answer}</p>
 
           <h4>Sources</h4>
