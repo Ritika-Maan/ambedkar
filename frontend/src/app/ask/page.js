@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 const API_BASE = "http://localhost:8000";
@@ -14,36 +14,51 @@ export default function AskPage() {
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
   const searchParams = useSearchParams();
+  const [slow, setSlow] = useState(false);
   useEffect(() => {
     const q = searchParams.get("q");
     if (q) setQuestion(q);
 }, [searchParams]);
 
-  async function handleAsk(e) {
-    e.preventDefault();
-    if (!question.trim()) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch(`${API_BASE}/ask`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, mode, lang, corpus, history }),
-      });
-      if (!res.ok) throw new Error(`Server returned ${res.status}`);
-      const data = await res.json();
-      setResult(data);
-      setHistory([
-        ...history,
-        { role: "user", content: question },
-        { role: "assistant", content: data.answer },
-      ]);
-    } catch (err) {
+async function handleAsk(e) {
+  e.preventDefault();
+  if (!question.trim()) return;
+  setLoading(true);
+  setError(null);
+  setSlow(false);
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000); // hard timeout
+  const slowTimer = setTimeout(() => setSlow(true), 6000); // "still working" flag
+
+  try {
+    const res = await fetch(`${API_BASE}/ask`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, mode, lang, corpus, history }),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`Server returned ${res.status}`);
+    const data = await res.json();
+    setResult(data);
+    setHistory([
+      ...history,
+      { role: "user", content: question },
+      { role: "assistant", content: data.answer },
+    ]);
+  } catch (err) {
+    if (err.name === "AbortError") {
+      setError("The archive is taking too long to respond. Try again, or check the backend is running.");
+    } else {
       setError(err.message || "Something went wrong. Is the backend running on :8000?");
-    } finally {
-      setLoading(false);
     }
+  } finally {
+    clearTimeout(timeoutId);
+    clearTimeout(slowTimer);
+    setSlow(false);
+    setLoading(false);
   }
+}
 
   return (
     <div style={{ maxWidth: 700, margin: "0 auto" }}>
@@ -89,7 +104,7 @@ export default function AskPage() {
         </div>
 
         <button type="submit" disabled={loading} style={{ padding: "0.6rem", fontWeight: 600 }}>
-          {loading ? "Thinking..." : "Ask"}
+          {loading ? (slow ? "Still thinking... (archive is slow right now)" : "Thinking...") : "Ask"}
         </button>
       </form>
 
