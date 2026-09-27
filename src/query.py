@@ -202,7 +202,7 @@ if __name__ == "__main__":
             print(result["answer"])
             print("\n--- Sources retrieved ---")
             for s in result["sources"]:
-                print(f"  - {s['title']} | Vol. {s['volume']}, {s['date']} | {s['type']}")
+                print(f"  - {s['title']} | Vol. {s['volume']}, {s['date']} | {s['type']} | section {s.get('section')}")
         except KeyboardInterrupt:
             print("\nBye.")
             break

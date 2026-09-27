@@ -5,6 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Literal, Optional
 from src.ingest import debates_collection
+import json
+
 
 sys.path.insert(0, os.path.dirname(__file__))
 from src.query import ask  # reuses the exact same ask() tested in the console
@@ -149,7 +151,11 @@ def debates_search(date: str = None, volume: str = None, topic: str = None, limi
         ]
     }
 
+GRAPH_DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "graph", "knowledge_graph.json")
 @app.get("/graph-data")
 def graph_data():
-    # Stub — real data comes once Shreya hands off her node/edge JSON.
-    return {"nodes": [], "edges": [], "status": "not yet available"}
+    try:
+        with open(GRAPH_DATA_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"nodes": [], "edges": [], "status": "not yet available"}

@@ -1,0 +1,2210 @@
+{
+  "nodes": [
+    {
+      "id": "P01",
+      "label": "Dr. B.R. Ambedkar",
+      "type": "person",
+      "description": "Central node \u2014 Chairman, Drafting Committee; author of the Draft Constitution"
+    },
+    {
+      "id": "P02",
+      "label": "Naziruddin Ahmad",
+      "type": "person",
+      "description": "Assembly member; raised concern on interpretation of the word 'law'"
+    },
+    {
+      "id": "P03",
+      "label": "Mohd. Tahir",
+      "type": "person",
+      "description": "Assembly member; raised protection from untouchability concern"
+    },
+    {
+      "id": "P04",
+      "label": "Saiyid Jafar Imam",
+      "type": "person",
+      "description": "Assembly member; co-raised untouchability protection concern"
+    },
+    {
+      "id": "P05",
+      "label": "K. T. Shah",
+      "type": "person",
+      "description": "Assembly member; raised Non-segregation of SC/ST and Freedom to the Press points"
+    },
+    {
+      "id": "P06",
+      "label": "S. Nagappa",
+      "type": "person",
+      "description": "Assembly member; raised access to public places concern"
+    },
+    {
+      "id": "P07",
+      "label": "B. G. Kher",
+      "type": "person",
+      "description": "Assembly member; co-raised access to public places concern"
+    },
+    {
+      "id": "P08",
+      "label": "H. V. Kamath",
+      "type": "person",
+      "description": "Assembly member; raised Right to Bear Arms as Fundamental Right"
+    },
+    {
+      "id": "P09",
+      "label": "Jaipal Singh",
+      "type": "person",
+      "description": "Assembly member; raised Scheduled Tribe terminology and tribal area protections"
+    },
+    {
+      "id": "P10",
+      "label": "Sardar Hukam Singh",
+      "type": "person",
+      "description": "Assembly member; raised SC/ST unreserved seats, reserved constituencies, minority safeguards"
+    },
+    {
+      "id": "P11",
+      "label": "V. I. Muniswamy Pillai",
+      "type": "person",
+      "description": "Assembly member; raised population basis for reserved representation"
+    },
+    {
+      "id": "P12",
+      "label": "N. C. Laskar",
+      "type": "person",
+      "description": "Assembly member; raised reserved constituencies composition"
+    },
+    {
+      "id": "T01",
+      "label": "Constitution/Governance",
+      "type": "theme"
+    },
+    {
+      "id": "T02",
+      "label": "Federalism",
+      "type": "theme"
+    },
+    {
+      "id": "T03",
+      "label": "Fundamental Rights",
+      "type": "theme"
+    },
+    {
+      "id": "T04",
+      "label": "Caste/Equality",
+      "type": "theme"
+    },
+    {
+      "id": "T05",
+      "label": "Tribal Rights",
+      "type": "theme"
+    },
+    {
+      "id": "T06",
+      "label": "Reservations",
+      "type": "theme"
+    },
+    {
+      "id": "T07",
+      "label": "Minorities",
+      "type": "theme"
+    },
+    {
+      "id": "T08",
+      "label": "Religion",
+      "type": "theme"
+    },
+    {
+      "id": "T09",
+      "label": "Citizenship",
+      "type": "theme"
+    },
+    {
+      "id": "INST01",
+      "label": "Drafting Committee",
+      "type": "institution",
+      "description": "Body chaired by Ambedkar responsible for preparing the Draft Constitution."
+    },
+    {
+      "id": "INST02",
+      "label": "Government of India Act, 1935",
+      "type": "institution",
+      "description": "Prior colonial-era legislation whose administrative provisions and Scheduled Tribe enumeration were referenced in drafting the Constitution."
+    },
+    {
+      "id": "INST03",
+      "label": "Comparative Federal Models (US & Australia)",
+      "type": "institution",
+      "description": "American and Australian constitutional/federal structures Ambedkar repeatedly compared India's Draft against, on federalism and amendment procedure."
+    },
+    {
+      "id": "W01",
+      "label": "Castes in India",
+      "type": "writing",
+      "volume": "1",
+      "pages": "1-22",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "Ambedkar argues caste is created by superimposing endogamy on an originally exogamous population, and spreads through imitation of the Brahmin caste's closed-door practice; he critiques occupation-based, tribal-survival, and other prior theories of caste as inadequate.",
+      "theme": "Caste/Equality"
+    },
+    {
+      "id": "W02",
+      "label": "Annihilation of Caste",
+      "type": "writing",
+      "volume": "1",
+      "pages": "23-98",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "Preface to Ambedkar's speech written for the Jat-Pat-Todak Mandal of Lahore (undelivered, as the Mandal withdrew its invitation over the content); describes its reception and translations, and includes his direct rebuttal to Gandhi's public criticism of the speech.",
+      "theme": "Caste/Equality"
+    },
+    {
+      "id": "I01",
+      "label": "Introduction of Draft Constitution",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Drafting Committee",
+      "summary": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution"
+    },
+    {
+      "id": "I02",
+      "label": "Form of Government",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Parliamentary system / Executive",
+      "summary": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution/Governance"
+    },
+    {
+      "id": "I03",
+      "label": "Dual Polity and Single Citizenship",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Union and States",
+      "summary": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I04",
+      "label": "Indian vs American Federalism",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "United States / American Constitution",
+      "summary": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I05",
+      "label": "Flexible Federalism",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Australian Constitution",
+      "summary": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I06",
+      "label": "Union of States",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "States/Union",
+      "summary": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism/National Unity"
+    },
+    {
+      "id": "I07",
+      "label": "Government of India Act provisions",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Government of India Act, 1935",
+      "summary": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Administration/Constitution"
+    },
+    {
+      "id": "I08",
+      "label": "Defence of Fundamental Rights Framework",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Fundamental Rights framework",
+      "summary": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I09",
+      "label": "Directive Principles",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Legislature/Executive",
+      "summary": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Directive Principles"
+    },
+    {
+      "id": "I10",
+      "label": "Constitutional Amendment",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "American & Australian Constitutions",
+      "summary": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Design"
+    },
+    {
+      "id": "I11",
+      "label": "Interpretation of 'Law'",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "Naziruddin Ahmad",
+      "summary": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Interpretation"
+    },
+    {
+      "id": "I12",
+      "label": "State Funds & Fundamental Rights",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "State/Local Authorities",
+      "summary": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I13",
+      "label": "Protection from Untouchability",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "Mohd. Tahir / Saiyid Jafar Imam",
+      "summary": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I14",
+      "label": "Non-segregation of SC/ST",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "K. T. Shah",
+      "summary": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I15",
+      "label": "Access to public places",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "S. Nagappa / B. G. Kher",
+      "summary": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I16",
+      "label": "Freedom to the Press",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "K. T. Shah",
+      "summary": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I17",
+      "label": "Right to Bear Arms",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "H. V. Kamath",
+      "summary": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I18",
+      "label": "Scheduled Tribe Terminology",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Jaipal Singh",
+      "summary": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights"
+    },
+    {
+      "id": "I19",
+      "label": "Legal Definition of Scheduled Tribes",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Government of India Act, 1935",
+      "summary": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights/Law"
+    },
+    {
+      "id": "I20",
+      "label": "Tribal Area Protections",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Jaipal Singh / Scheduled Tribes",
+      "summary": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights"
+    },
+    {
+      "id": "I21",
+      "label": "Fundamental Rights & State Restrictions",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "State/Legislature",
+      "summary": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I22",
+      "label": "Reserved Seats for SC/ST",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Scheduled Castes & Scheduled Tribes",
+      "summary": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations"
+    },
+    {
+      "id": "I23",
+      "label": "SC/ST in Unreserved Seats",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Sardar Hukam Singh",
+      "summary": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Representation"
+    },
+    {
+      "id": "I24",
+      "label": "Population for Reserved Representation",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "V. I. Muniswamy Pillai",
+      "summary": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Representation"
+    },
+    {
+      "id": "I25",
+      "label": "Reserved Constituencies",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "N. C. Laskar / Sardar Hukam Singh",
+      "summary": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Elections"
+    },
+    {
+      "id": "I26",
+      "label": "SC/ST Legislative Representation",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Advisory Committee",
+      "summary": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations"
+    },
+    {
+      "id": "I27",
+      "label": "Minority Safeguards",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Muslims & Christians",
+      "summary": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities"
+    },
+    {
+      "id": "I28",
+      "label": "Legislative Reservation vs Services",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Sardar Hukam Singh",
+      "summary": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities/Public Employment"
+    },
+    {
+      "id": "I29",
+      "label": "Minority Safeguards Monitoring",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Special Officer for Minorities",
+      "summary": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities/Constitutional Safeguards"
+    },
+    {
+      "id": "I30",
+      "label": "Advisory Committee Decisions",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Advisory Committee / Drafting Committee",
+      "summary": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards.",
+      "theme": "Minorities",
+      "raw_theme": "Constitution/Minorities"
+    },
+    {
+      "id": "I31",
+      "label": "Amendment procedure",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Constitution",
+      "summary": "Distinguished the Constituent Assembly from future Parliament when discussing constitutional amendment powers.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution"
+    },
+    {
+      "id": "I32",
+      "label": "Strong Centre",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Federalism",
+      "summary": "Explained the constitutional reasoning behind giving significant powers to the Union",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I33",
+      "label": "Comparative constitutions",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Constitutional Design",
+      "summary": "Responded to criticism concerning the use of constitutional ideas from other countries",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Design"
+    },
+    {
+      "id": "I34",
+      "label": "Status of Directive Principles",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Directive Principles",
+      "summary": "Explained their role even though they were not directly enforceable by courts.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Directive Principles"
+    },
+    {
+      "id": "I35",
+      "label": "Union-State powers",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Federalism",
+      "summary": "Explained federalism as a division of legislative and executive powers between Union and States",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I36",
+      "label": "Uniform Civil Code",
+      "type": "intervention",
+      "date": "1948-11-23",
+      "volume": "VII",
+      "mentioned": "Religion",
+      "summary": "Responded to arguments concerning a common civil code and its relationship with religious communities",
+      "theme": "Religion",
+      "raw_theme": "Religion"
+    },
+    {
+      "id": "I37",
+      "label": "Personal law",
+      "type": "intervention",
+      "date": "1948-11-23",
+      "volume": "VII",
+      "mentioned": "Religion",
+      "summary": "Discussed the constitutional treatment of personal laws and religious practices",
+      "theme": "Religion",
+      "raw_theme": "Religion"
+    },
+    {
+      "id": "I38",
+      "label": "Freedom of religion",
+      "type": "intervention",
+      "date": "1948-11-23",
+      "volume": "VII",
+      "mentioned": "Fundamental Rights",
+      "summary": "Addressed the relationship between religious freedom and constitutional limitations",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I39",
+      "label": "Freedom of the press",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Press Freedom",
+      "summary": "Explained that the press did not require a separate fundamental right because press activity was covered by citizens' freedom of expression.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Press Freedom"
+    },
+    {
+      "id": "I40",
+      "label": "Right to bear arms",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Civil Liberties",
+      "summary": "Responded to H. V. Kamath's argument and explained why a general constitutional right to bear arms was not being provided",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Civil Liberties"
+    },
+    {
+      "id": "I41",
+      "label": "Reasonable restrictions",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Fundamental Rights",
+      "summary": "Discussed the circumstances in which rights could be subject to restrictions",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I42",
+      "label": "Writ jurisdiction",
+      "type": "intervention",
+      "date": "1948-12-09",
+      "volume": "VII",
+      "mentioned": "Constitutional Remedies",
+      "summary": "Defended the constitutional provision for remedies to enforce Fundamental Rights",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Constitutional Remedies"
+    },
+    {
+      "id": "I43",
+      "label": "Habeas Corpus / Mandamus",
+      "type": "intervention",
+      "date": "1948-12-09",
+      "volume": "VII",
+      "mentioned": "Judiciary",
+      "summary": "Explained the relationship between existing legal remedies and the constitutional remedies being created.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Judiciary"
+    },
+    {
+      "id": "I44",
+      "label": "Protection against legislative majorities",
+      "type": "intervention",
+      "date": "1948-12-09",
+      "volume": "VII",
+      "mentioned": "Fundamental Rights",
+      "summary": "Explained why constitutional remedies were important for protecting rights against ordinary legislative action.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I45",
+      "label": "Migration from Pakistan",
+      "type": "intervention",
+      "date": "1949-08-12",
+      "volume": "IX",
+      "mentioned": "Citizenship",
+      "summary": "Responded to criticism that the proposed citizenship provisions made citizenship too easy to obtain",
+      "theme": "Citizenship",
+      "raw_theme": "Citizenship"
+    },
+    {
+      "id": "I46",
+      "label": "Assam migration",
+      "type": "intervention",
+      "date": "1949-08-12",
+      "volume": "IX",
+      "mentioned": "Citizenship",
+      "summary": "Explained the special treatment of persons entering Assam before and after 19 July 1948.",
+      "theme": "Citizenship",
+      "raw_theme": "Citizenship"
+    },
+    {
+      "id": "I47",
+      "label": "Citizenship registration",
+      "type": "intervention",
+      "date": "1949-08-12",
+      "volume": "IX",
+      "mentioned": "Citizenship",
+      "summary": "Explained the requirement of application, residence and registration for certain migrants entering Assam after the specified date.",
+      "theme": "Citizenship",
+      "raw_theme": "Citizenship"
+    },
+    {
+      "id": "I48",
+      "label": "Loss of citizenship",
+      "type": "intervention",
+      "date": "1949-05-19",
+      "volume": "VIII",
+      "mentioned": "Citizenship",
+      "summary": "Proposed provisions concerning people who ceased to be Indian citizens or voluntarily acquired foreign citizenship.",
+      "theme": "Citizenship",
+      "raw_theme": "Citizenship"
+    },
+    {
+      "id": "I49",
+      "label": "Foreign allegiance",
+      "type": "intervention",
+      "date": "1949-05-19",
+      "volume": "VIII",
+      "mentioned": "Citizenship",
+      "summary": "Addressed constitutional consequences of allegiance or citizenship of a foreign state",
+      "theme": "Citizenship",
+      "raw_theme": "Citizenship"
+    },
+    {
+      "id": "I50",
+      "label": "Nominated members",
+      "type": "intervention",
+      "date": "1949-05-23",
+      "volume": "VIII",
+      "mentioned": "Parliament",
+      "summary": "Explained the proposed nomination of persons with expertise in areas such as literature, science, arts and social service.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Parliament"
+    },
+    {
+      "id": "I51",
+      "label": "Duplicate nomination provisions",
+      "type": "intervention",
+      "date": "1949-05-23",
+      "volume": "VIII",
+      "mentioned": "Parliament",
+      "summary": "Proposed withdrawal of a provision because an existing constitutional provision already served the same purpose.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Parliament"
+    },
+    {
+      "id": "I52",
+      "label": "Constituent Assembly as Legislature",
+      "type": "intervention",
+      "date": "1949-06-10",
+      "volume": "VIII",
+      "mentioned": "Legislature",
+      "summary": "Explained the distinction between the Assembly functioning as the Constituent Assembly and as the legislature",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Legislature"
+    },
+    {
+      "id": "I53",
+      "label": "Dominion of India",
+      "type": "intervention",
+      "date": "1949-06-10",
+      "volume": "VIII",
+      "mentioned": "Constitutional Terminology",
+      "summary": "Defended retaining terminology consistent with the Indian Independence Act",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Terminology"
+    },
+    {
+      "id": "I54",
+      "label": "Constitutional procedure",
+      "type": "intervention",
+      "date": "1949-08-08",
+      "volume": "IX",
+      "mentioned": "Legislature",
+      "summary": "Participated in discussion of provisions governing the legislature and constitutional procedure.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Legislature"
+    },
+    {
+      "id": "I55",
+      "label": "Working of the Constitution",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Constitutional Morality",
+      "summary": "Explained that the effectiveness of a Constitution depends significantly on how it is actually worked",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Morality"
+    },
+    {
+      "id": "I56",
+      "label": "Political democracy",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Democracy",
+      "summary": "Discussed the relationship between constitutional government and democratic functioning",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Democracy"
+    },
+    {
+      "id": "I57",
+      "label": "Liberty, Equality, Fraternity",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Social Democracy",
+      "summary": "Connected political democracy with the principles of liberty, equality and fraternity.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Social Democracy"
+    },
+    {
+      "id": "I58",
+      "label": "Limitations on rights",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Fundamental Rights",
+      "summary": "Discussed the argument that Fundamental Rights should be absolute and the constitutional approach to limitations.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I59",
+      "label": "Socialism / Property rights",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Property",
+      "summary": "Responded to arguments concerning nationalisation, socialisation of private property and compensation.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Property"
+    },
+    {
+      "id": "I60",
+      "label": "Emergency powers",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Federalism",
+      "summary": "Explained the rationale for overriding Union powers in emergencies and the interests of the country as a whole.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I61",
+      "label": "Party discipline",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Political Parties",
+      "summary": "Reflected on the role of party discipline and independent/rebellious members during constitution-making.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Political Parties"
+    },
+    {
+      "id": "I62",
+      "label": "Role of opposition",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Constitution-making",
+      "summary": "Acknowledged the contribution of members whose criticisms challenged the Drafting Committee.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution-making"
+    },
+    {
+      "id": "I63",
+      "label": "Future Parliament",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Constitutional Amendment",
+      "summary": "Distinguished the amendment powers of the future Parliament from those of the Constituent Assembly.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Amendment"
+    },
+    {
+      "id": "I64",
+      "label": "Future generations",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Constitution",
+      "summary": "Discussed the difficulty of constitution-makers binding future generations through constitutional provisions.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution"
+    },
+    {
+      "id": "I65",
+      "label": "Union authority",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "National Unity",
+      "summary": "Explained why certain overriding Union powers were considered necessary for national interests.",
+      "theme": "Federalism",
+      "raw_theme": "National Unity"
+    },
+    {
+      "id": "I66",
+      "label": "Constitutional implementation",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Constitutional Government",
+      "summary": "Emphasised the importance of the people and institutions responsible for operating the Constitution.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Government"
+    },
+    {
+      "id": "I67",
+      "label": "Future of independence",
+      "type": "intervention",
+      "date": "1949-11-25",
+      "volume": "XI",
+      "mentioned": "Independence",
+      "summary": "Reflected on whether India would maintain its independence after becoming a Republic.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Independence"
+    },
+    {
+      "id": "I68",
+      "label": "Third Reading",
+      "type": "intervention",
+      "date": "1949-11-17",
+      "volume": "XI",
+      "mentioned": "Constitution",
+      "summary": "Moved the motion that the Constitution as settled by the Assembly be passed.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution"
+    },
+    {
+      "id": "I69",
+      "label": "Final adoption process",
+      "type": "intervention",
+      "date": "1949-11-17",
+      "volume": "XI",
+      "mentioned": "Constitution-making",
+      "summary": "Participated in the final-stage discussion of the Constitution before adoption.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution-making"
+    },
+    {
+      "id": "I70",
+      "label": "Equal opportunities",
+      "type": "intervention",
+      "date": "1949-11-17",
+      "volume": "XI",
+      "mentioned": "Equality",
+      "summary": "The debate included discussion of equal opportunities for different classes and sections of Indian society.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Equality"
+    },
+    {
+      "id": "I71",
+      "label": "Sixth Schedule",
+      "type": "intervention",
+      "date": "1949-09-06",
+      "volume": "IX",
+      "mentioned": "Scheduled Areas",
+      "summary": "Proposed reducing the maximum membership of District/Regional Councils from forty to twenty-four.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Scheduled Areas"
+    },
+    {
+      "id": "I72",
+      "label": "Constituencies",
+      "type": "intervention",
+      "date": "1949-09-06",
+      "volume": "IX",
+      "mentioned": "Tribal Administration",
+      "summary": "Proposed leaving delimitation of constituencies to rules rather than fixing the details directly in the Constitution.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Administration"
+    },
+    {
+      "id": "I73",
+      "label": "Council membership",
+      "type": "intervention",
+      "date": "1949-09-06",
+      "volume": "IX",
+      "mentioned": "Tribal Administration",
+      "summary": "Proposed adding the term of office of members of the relevant councils to the Sixth Schedule",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Administration"
+    },
+    {
+      "id": "I74",
+      "label": "Article 15",
+      "type": "intervention",
+      "date": "1949-09-15",
+      "volume": "IX",
+      "mentioned": "Fundamental Rights",
+      "summary": "Revisited the earlier debate over \u201cdue process\u201d versus \u201cprocedure established by law.\u201d",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I75",
+      "label": "Arrest",
+      "type": "intervention",
+      "date": "1949-09-15",
+      "volume": "IX",
+      "mentioned": "Personal Liberty",
+      "summary": "Explained concerns that Article 15, without additional safeguards, could permit Parliament broad power concerning arrest",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Personal Liberty"
+    },
+    {
+      "id": "I76",
+      "label": "Article 15A",
+      "type": "intervention",
+      "date": "1949-09-15",
+      "volume": "IX",
+      "mentioned": "Personal Liberty",
+      "summary": "Explained the proposed Article 15A as providing safeguards associated with due process.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Personal Liberty"
+    },
+    {
+      "id": "T10",
+      "label": "Linguistic States / State Reorganization",
+      "type": "theme"
+    },
+    {
+      "id": "W03",
+      "label": "Communal Deadlock and a Way to Solve It",
+      "type": "writing",
+      "volume": "1",
+      "pages": "355-380",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "Address to the All India Scheduled Castes Federation (1945) proposing a scheme for representation of Hindus, Muslims, Scheduled Castes and other minorities in the legislature, executive and services of a future Indian constitution, critiquing both the Cripps and Sapru Constituent Assembly proposals and rejecting simple majority rule as unsuited to a country with a permanent communal majority.",
+      "theme": "Minorities"
+    },
+    {
+      "id": "W04",
+      "label": "Federation versus Freedom",
+      "type": "writing",
+      "volume": "1",
+      "pages": "279-354",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "Kale Memorial Lecture (1939) analyzing the federal scheme of the Government of India Act, 1935, arguing it is not a genuine federation, gives the Indian Princely States disproportionate power over British India, blocks India's path to Dominion Status, and should be rejected in favour of a Federation of British India alone.",
+      "theme": "Federalism"
+    },
+    {
+      "id": "W05",
+      "label": "Need for Checks and Balances",
+      "type": "writing",
+      "volume": "1",
+      "pages": "129-136",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "1953 Times of India article on the creation of linguistic States (prompted by the Andhra agitation), setting out three conditions for forming a linguistic State: viability, awareness of the internal caste/communal composition of the proposed State, and caution against consolidating all speakers of one language into a single unit.",
+      "theme": "Linguistic States / State Reorganization"
+    },
+    {
+      "id": "W06",
+      "label": "States and Minorities",
+      "type": "writing",
+      "volume": "1",
+      "pages": "381-452",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "1947 memorandum submitted to the Constituent Assembly on behalf of the All India Scheduled Castes Federation, drafted as proposed constitutional articles covering admission of Indian States into the Union, Fundamental Rights of citizens, protections for minorities generally, and specific safeguards (representation, education, settlement) for the Scheduled Castes, including a critique of the Poona Pact's joint-electorate mechanism.",
+      "theme": "Minorities"
+    },
+    {
+      "id": "W07",
+      "label": "Thoughts on Linguistic States",
+      "type": "writing",
+      "volume": "1",
+      "pages": "137-204",
+      "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
+      "summary": "1955 response to the States Reorganisation Commission report, arguing its recommendations consolidate the Hindi-speaking North while balkanizing the South, proposing division of Uttar Pradesh, Bihar, Madhya Pradesh and Maharashtra into smaller units, a separate Bombay City State, cumulative voting to protect minorities within linguistic States, and a second (southern) national capital at Hyderabad.",
+      "theme": "Linguistic States / State Reorganization"
+    },
+    {
+      "id": "P13",
+      "label": "Mahatma Gandhi",
+      "type": "person",
+      "description": "Congress leader; subject of Ambedkar's direct criticism in multiple writings (Round Table Conference conduct, the Poona Pact, and the 1920 Congress linguistic-provinces scheme)."
+    }
+  ],
+  "edges": [
+    {
+      "source": "P01",
+      "target": "I01",
+      "relationship": "intervened in",
+      "justification": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee."
+    },
+    {
+      "source": "I01",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Introduction of Draft Constitution' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I02",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems."
+    },
+    {
+      "source": "I02",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Form of Government' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I03",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship."
+    },
+    {
+      "source": "I03",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Dual Polity and Single Citizenship' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I04",
+      "relationship": "intervened in",
+      "justification": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations."
+    },
+    {
+      "source": "I04",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Indian vs American Federalism' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I05",
+      "relationship": "intervened in",
+      "justification": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity."
+    },
+    {
+      "source": "I05",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Flexible Federalism' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I06",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession."
+    },
+    {
+      "source": "I06",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Union of States' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I07",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft."
+    },
+    {
+      "source": "I07",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Government of India Act provisions' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I08",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations."
+    },
+    {
+      "source": "I08",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Fundamental Rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I09",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant."
+    },
+    {
+      "source": "I09",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Directive Principles' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I10",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations."
+    },
+    {
+      "source": "I10",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constitutional Amendment' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I11",
+      "relationship": "intervened in",
+      "justification": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation."
+    },
+    {
+      "source": "I11",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Interpretation of 'Law'' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P02",
+      "target": "I11",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation."
+    },
+    {
+      "source": "P01",
+      "target": "I12",
+      "relationship": "intervened in",
+      "justification": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments."
+    },
+    {
+      "source": "I12",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'State Funds & Fundamental Rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I13",
+      "relationship": "intervened in",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "I13",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Protection from Untouchability' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P03",
+      "target": "I13",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "P04",
+      "target": "I13",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "P01",
+      "target": "I14",
+      "relationship": "intervened in",
+      "justification": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public."
+    },
+    {
+      "source": "I14",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Non-segregation of SC/ST' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P05",
+      "target": "I14",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public."
+    },
+    {
+      "source": "P01",
+      "target": "I15",
+      "relationship": "intervened in",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "I15",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Access to public places' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P06",
+      "target": "I15",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "P07",
+      "target": "I15",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "P01",
+      "target": "I16",
+      "relationship": "intervened in",
+      "justification": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression."
+    },
+    {
+      "source": "I16",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Freedom to the Press' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P05",
+      "target": "I16",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression."
+    },
+    {
+      "source": "P01",
+      "target": "I17",
+      "relationship": "intervened in",
+      "justification": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security."
+    },
+    {
+      "source": "I17",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Right to Bear Arms' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P08",
+      "target": "I17",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security."
+    },
+    {
+      "source": "P01",
+      "target": "I18",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning."
+    },
+    {
+      "source": "I18",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Scheduled Tribe Terminology' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P09",
+      "target": "I18",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning."
+    },
+    {
+      "source": "P01",
+      "target": "I19",
+      "relationship": "intervened in",
+      "justification": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories."
+    },
+    {
+      "source": "I19",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Legal Definition of Scheduled Tribes' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I20",
+      "relationship": "intervened in",
+      "justification": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area."
+    },
+    {
+      "source": "I20",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Tribal Area Protections' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P09",
+      "target": "I20",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area."
+    },
+    {
+      "source": "P01",
+      "target": "I21",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute."
+    },
+    {
+      "source": "I21",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Fundamental Rights & State Restrictions' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I22",
+      "relationship": "intervened in",
+      "justification": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam."
+    },
+    {
+      "source": "I22",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Reserved Seats for SC/ST' is categorized under Reservations."
+    },
+    {
+      "source": "P01",
+      "target": "I23",
+      "relationship": "intervened in",
+      "justification": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law."
+    },
+    {
+      "source": "I23",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'SC/ST in Unreserved Seats' is categorized under Reservations."
+    },
+    {
+      "source": "P10",
+      "target": "I23",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law."
+    },
+    {
+      "source": "P01",
+      "target": "I24",
+      "relationship": "intervened in",
+      "justification": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength."
+    },
+    {
+      "source": "I24",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Population for Reserved Representation' is categorized under Reservations."
+    },
+    {
+      "source": "P11",
+      "target": "I24",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength."
+    },
+    {
+      "source": "P01",
+      "target": "I25",
+      "relationship": "intervened in",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "I25",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Reserved Constituencies' is categorized under Reservations."
+    },
+    {
+      "source": "P12",
+      "target": "I25",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "P10",
+      "target": "I25",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "P01",
+      "target": "I26",
+      "relationship": "intervened in",
+      "justification": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation."
+    },
+    {
+      "source": "I26",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'SC/ST Legislative Representation' is categorized under Reservations."
+    },
+    {
+      "source": "P01",
+      "target": "I27",
+      "relationship": "intervened in",
+      "justification": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion."
+    },
+    {
+      "source": "I27",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Minority Safeguards' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "I28",
+      "relationship": "intervened in",
+      "justification": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services."
+    },
+    {
+      "source": "I28",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Legislative Reservation vs Services' is categorized under Minorities."
+    },
+    {
+      "source": "P10",
+      "target": "I28",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services."
+    },
+    {
+      "source": "P01",
+      "target": "I29",
+      "relationship": "intervened in",
+      "justification": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President."
+    },
+    {
+      "source": "I29",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Minority Safeguards Monitoring' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "I30",
+      "relationship": "intervened in",
+      "justification": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards."
+    },
+    {
+      "source": "I30",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Advisory Committee Decisions' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "I31",
+      "relationship": "intervened in",
+      "justification": "Distinguished the Constituent Assembly from future Parliament when discussing constitutional amendment powers."
+    },
+    {
+      "source": "I31",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Amendment procedure' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I32",
+      "relationship": "intervened in",
+      "justification": "Explained the constitutional reasoning behind giving significant powers to the Union"
+    },
+    {
+      "source": "I32",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Strong Centre' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I33",
+      "relationship": "intervened in",
+      "justification": "Responded to criticism concerning the use of constitutional ideas from other countries"
+    },
+    {
+      "source": "I33",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Comparative constitutions' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I34",
+      "relationship": "intervened in",
+      "justification": "Explained their role even though they were not directly enforceable by courts."
+    },
+    {
+      "source": "I34",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Status of Directive Principles' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I35",
+      "relationship": "intervened in",
+      "justification": "Explained federalism as a division of legislative and executive powers between Union and States"
+    },
+    {
+      "source": "I35",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Union-State powers' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I36",
+      "relationship": "intervened in",
+      "justification": "Responded to arguments concerning a common civil code and its relationship with religious communities"
+    },
+    {
+      "source": "I36",
+      "target": "T08",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Uniform Civil Code' is categorized under Religion."
+    },
+    {
+      "source": "P01",
+      "target": "I37",
+      "relationship": "intervened in",
+      "justification": "Discussed the constitutional treatment of personal laws and religious practices"
+    },
+    {
+      "source": "I37",
+      "target": "T08",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Personal law' is categorized under Religion."
+    },
+    {
+      "source": "P01",
+      "target": "I38",
+      "relationship": "intervened in",
+      "justification": "Addressed the relationship between religious freedom and constitutional limitations"
+    },
+    {
+      "source": "I38",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Freedom of religion' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I39",
+      "relationship": "intervened in",
+      "justification": "Explained that the press did not require a separate fundamental right because press activity was covered by citizens' freedom of expression."
+    },
+    {
+      "source": "I39",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Freedom of the press' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I40",
+      "relationship": "intervened in",
+      "justification": "Responded to H. V. Kamath's argument and explained why a general constitutional right to bear arms was not being provided"
+    },
+    {
+      "source": "I40",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Right to bear arms' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I41",
+      "relationship": "intervened in",
+      "justification": "Discussed the circumstances in which rights could be subject to restrictions"
+    },
+    {
+      "source": "I41",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Reasonable restrictions' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I42",
+      "relationship": "intervened in",
+      "justification": "Defended the constitutional provision for remedies to enforce Fundamental Rights"
+    },
+    {
+      "source": "I42",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Writ jurisdiction' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I43",
+      "relationship": "intervened in",
+      "justification": "Explained the relationship between existing legal remedies and the constitutional remedies being created."
+    },
+    {
+      "source": "I43",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Habeas Corpus / Mandamus' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I44",
+      "relationship": "intervened in",
+      "justification": "Explained why constitutional remedies were important for protecting rights against ordinary legislative action."
+    },
+    {
+      "source": "I44",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Protection against legislative majorities' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I45",
+      "relationship": "intervened in",
+      "justification": "Responded to criticism that the proposed citizenship provisions made citizenship too easy to obtain"
+    },
+    {
+      "source": "I45",
+      "target": "T09",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Migration from Pakistan' is categorized under Citizenship."
+    },
+    {
+      "source": "P01",
+      "target": "I46",
+      "relationship": "intervened in",
+      "justification": "Explained the special treatment of persons entering Assam before and after 19 July 1948."
+    },
+    {
+      "source": "I46",
+      "target": "T09",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Assam migration' is categorized under Citizenship."
+    },
+    {
+      "source": "P01",
+      "target": "I47",
+      "relationship": "intervened in",
+      "justification": "Explained the requirement of application, residence and registration for certain migrants entering Assam after the specified date."
+    },
+    {
+      "source": "I47",
+      "target": "T09",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Citizenship registration' is categorized under Citizenship."
+    },
+    {
+      "source": "P01",
+      "target": "I48",
+      "relationship": "intervened in",
+      "justification": "Proposed provisions concerning people who ceased to be Indian citizens or voluntarily acquired foreign citizenship."
+    },
+    {
+      "source": "I48",
+      "target": "T09",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Loss of citizenship' is categorized under Citizenship."
+    },
+    {
+      "source": "P01",
+      "target": "I49",
+      "relationship": "intervened in",
+      "justification": "Addressed constitutional consequences of allegiance or citizenship of a foreign state"
+    },
+    {
+      "source": "I49",
+      "target": "T09",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Foreign allegiance' is categorized under Citizenship."
+    },
+    {
+      "source": "P01",
+      "target": "I50",
+      "relationship": "intervened in",
+      "justification": "Explained the proposed nomination of persons with expertise in areas such as literature, science, arts and social service."
+    },
+    {
+      "source": "I50",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Nominated members' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I51",
+      "relationship": "intervened in",
+      "justification": "Proposed withdrawal of a provision because an existing constitutional provision already served the same purpose."
+    },
+    {
+      "source": "I51",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Duplicate nomination provisions' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I52",
+      "relationship": "intervened in",
+      "justification": "Explained the distinction between the Assembly functioning as the Constituent Assembly and as the legislature"
+    },
+    {
+      "source": "I52",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constituent Assembly as Legislature' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I53",
+      "relationship": "intervened in",
+      "justification": "Defended retaining terminology consistent with the Indian Independence Act"
+    },
+    {
+      "source": "I53",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Dominion of India' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I54",
+      "relationship": "intervened in",
+      "justification": "Participated in discussion of provisions governing the legislature and constitutional procedure."
+    },
+    {
+      "source": "I54",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constitutional procedure' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I55",
+      "relationship": "intervened in",
+      "justification": "Explained that the effectiveness of a Constitution depends significantly on how it is actually worked"
+    },
+    {
+      "source": "I55",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Working of the Constitution' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I56",
+      "relationship": "intervened in",
+      "justification": "Discussed the relationship between constitutional government and democratic functioning"
+    },
+    {
+      "source": "I56",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Political democracy' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I57",
+      "relationship": "intervened in",
+      "justification": "Connected political democracy with the principles of liberty, equality and fraternity."
+    },
+    {
+      "source": "I57",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Liberty, Equality, Fraternity' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I58",
+      "relationship": "intervened in",
+      "justification": "Discussed the argument that Fundamental Rights should be absolute and the constitutional approach to limitations."
+    },
+    {
+      "source": "I58",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Limitations on rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I59",
+      "relationship": "intervened in",
+      "justification": "Responded to arguments concerning nationalisation, socialisation of private property and compensation."
+    },
+    {
+      "source": "I59",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Socialism / Property rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I60",
+      "relationship": "intervened in",
+      "justification": "Explained the rationale for overriding Union powers in emergencies and the interests of the country as a whole."
+    },
+    {
+      "source": "I60",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Emergency powers' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I61",
+      "relationship": "intervened in",
+      "justification": "Reflected on the role of party discipline and independent/rebellious members during constitution-making."
+    },
+    {
+      "source": "I61",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Party discipline' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I62",
+      "relationship": "intervened in",
+      "justification": "Acknowledged the contribution of members whose criticisms challenged the Drafting Committee."
+    },
+    {
+      "source": "I62",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Role of opposition' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I63",
+      "relationship": "intervened in",
+      "justification": "Distinguished the amendment powers of the future Parliament from those of the Constituent Assembly."
+    },
+    {
+      "source": "I63",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Future Parliament' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I64",
+      "relationship": "intervened in",
+      "justification": "Discussed the difficulty of constitution-makers binding future generations through constitutional provisions."
+    },
+    {
+      "source": "I64",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Future generations' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I65",
+      "relationship": "intervened in",
+      "justification": "Explained why certain overriding Union powers were considered necessary for national interests."
+    },
+    {
+      "source": "I65",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Union authority' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I66",
+      "relationship": "intervened in",
+      "justification": "Emphasised the importance of the people and institutions responsible for operating the Constitution."
+    },
+    {
+      "source": "I66",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constitutional implementation' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I67",
+      "relationship": "intervened in",
+      "justification": "Reflected on whether India would maintain its independence after becoming a Republic."
+    },
+    {
+      "source": "I67",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Future of independence' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I68",
+      "relationship": "intervened in",
+      "justification": "Moved the motion that the Constitution as settled by the Assembly be passed."
+    },
+    {
+      "source": "I68",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Third Reading' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I69",
+      "relationship": "intervened in",
+      "justification": "Participated in the final-stage discussion of the Constitution before adoption."
+    },
+    {
+      "source": "I69",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Final adoption process' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I70",
+      "relationship": "intervened in",
+      "justification": "The debate included discussion of equal opportunities for different classes and sections of Indian society."
+    },
+    {
+      "source": "I70",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Equal opportunities' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P01",
+      "target": "I71",
+      "relationship": "intervened in",
+      "justification": "Proposed reducing the maximum membership of District/Regional Councils from forty to twenty-four."
+    },
+    {
+      "source": "I71",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Sixth Schedule' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I72",
+      "relationship": "intervened in",
+      "justification": "Proposed leaving delimitation of constituencies to rules rather than fixing the details directly in the Constitution."
+    },
+    {
+      "source": "I72",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constituencies' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I73",
+      "relationship": "intervened in",
+      "justification": "Proposed adding the term of office of members of the relevant councils to the Sixth Schedule"
+    },
+    {
+      "source": "I73",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Council membership' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I74",
+      "relationship": "intervened in",
+      "justification": "Revisited the earlier debate over \u201cdue process\u201d versus \u201cprocedure established by law.\u201d"
+    },
+    {
+      "source": "I74",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Article 15' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I75",
+      "relationship": "intervened in",
+      "justification": "Explained concerns that Article 15, without additional safeguards, could permit Parliament broad power concerning arrest"
+    },
+    {
+      "source": "I75",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Arrest' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I76",
+      "relationship": "intervened in",
+      "justification": "Explained the proposed Article 15A as providing safeguards associated with due process."
+    },
+    {
+      "source": "I76",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Article 15A' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "I01",
+      "target": "INST01",
+      "relationship": "references institution",
+      "justification": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee."
+    },
+    {
+      "source": "I30",
+      "target": "INST01",
+      "relationship": "references institution",
+      "justification": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards."
+    },
+    {
+      "source": "I07",
+      "target": "INST02",
+      "relationship": "references institution",
+      "justification": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft."
+    },
+    {
+      "source": "I19",
+      "target": "INST02",
+      "relationship": "references institution",
+      "justification": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories."
+    },
+    {
+      "source": "I04",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations."
+    },
+    {
+      "source": "I05",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity."
+    },
+    {
+      "source": "I10",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations."
+    },
+    {
+      "source": "P01",
+      "target": "W01",
+      "relationship": "authored",
+      "justification": "Ambedkar argues caste is created by superimposing endogamy on an originally exogamous population, and spreads through imitation of the Brahmin caste's closed-door practice; he critiques occupation-based, tribal-survival, and other prior theories of caste as inadequate."
+    },
+    {
+      "source": "W01",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "'Castes in India' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P01",
+      "target": "W02",
+      "relationship": "authored",
+      "justification": "Preface to Ambedkar's speech written for the Jat-Pat-Todak Mandal of Lahore (undelivered, as the Mandal withdrew its invitation over the content); describes its reception and translations, and includes his direct rebuttal to Gandhi's public criticism of the speech."
+    },
+    {
+      "source": "W02",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "'Annihilation of Caste' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P01",
+      "target": "W03",
+      "relationship": "authored",
+      "justification": "Address to the All India Scheduled Castes Federation (1945) proposing a scheme for representation of Hindus, Muslims, Scheduled Castes and o..."
+    },
+    {
+      "source": "W03",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "'Communal Deadlock and a Way to Solve It' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "W04",
+      "relationship": "authored",
+      "justification": "Kale Memorial Lecture (1939) analyzing the federal scheme of the Government of India Act, 1935, arguing it is not a genuine federation, give..."
+    },
+    {
+      "source": "W04",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "'Federation versus Freedom' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "W05",
+      "relationship": "authored",
+      "justification": "1953 Times of India article on the creation of linguistic States (prompted by the Andhra agitation), setting out three conditions for formin..."
+    },
+    {
+      "source": "W05",
+      "target": "T10",
+      "relationship": "relates to theme",
+      "justification": "'Need for Checks and Balances' is categorized under Linguistic States / State Reorganization."
+    },
+    {
+      "source": "P01",
+      "target": "W06",
+      "relationship": "authored",
+      "justification": "1947 memorandum submitted to the Constituent Assembly on behalf of the All India Scheduled Castes Federation, drafted as proposed constituti..."
+    },
+    {
+      "source": "W06",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "'States and Minorities' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "W07",
+      "relationship": "authored",
+      "justification": "1955 response to the States Reorganisation Commission report, arguing its recommendations consolidate the Hindi-speaking North while balkani..."
+    },
+    {
+      "source": "W07",
+      "target": "T10",
+      "relationship": "relates to theme",
+      "justification": "'Thoughts on Linguistic States' is categorized under Linguistic States / State Reorganization."
+    },
+    {
+      "source": "W04",
+      "target": "P13",
+      "relationship": "critiques",
+      "justification": "Ambedkar criticizes Gandhi's conduct and unpreparedness as India's representative at the Round Table Conference."
+    },
+    {
+      "source": "W06",
+      "target": "P13",
+      "relationship": "critiques",
+      "justification": "Ambedkar's memorandum argues the Poona Pact (negotiated under pressure of Gandhi's fast) has disenfranchised the Scheduled Castes and proposes its replacement."
+    },
+    {
+      "source": "W07",
+      "target": "P13",
+      "relationship": "references",
+      "justification": "Discusses the 1920 Congress constitution (framed under Gandhi) adopting linguistic provinces, and Gandhi's assassination as context for communal tension in Maharashtra."
+    },
+    {
+      "source": "W02",
+      "target": "P13",
+      "relationship": "critiques",
+      "justification": "'Annihilation of Caste' includes Ambedkar's direct rebuttal to Gandhi's public criticism of the speech (already noted in W02's existing summary)."
+    }
+  ]
+}
