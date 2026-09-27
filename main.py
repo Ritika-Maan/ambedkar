@@ -45,6 +45,7 @@ class AskResponse(BaseModel):
     mode: str
     sources: list[Source]
     lang: str
+    cached: Optional[bool] = False
 
 
 @app.get("/")
@@ -62,13 +63,16 @@ def _cache_key(question, mode, corpus, n_results, history=None, lang="en"):
 def ask_endpoint(req: AskRequest):
     key = _cache_key(req.question, req.mode, req.corpus, req.n_results, req.history, req.lang)
     if key in _cache:
-        return _cache[key]
+        cached_result = dict(_cache[key])
+        cached_result["cached"] = True
+        return cached_result
     try:
         result = ask(question=req.question, mode=req.mode, n_results=req.n_results,
                       corpus=req.corpus, history=req.history, lang=req.lang)
     except Exception as e:
         print(f"[/ask] error: {e}")
         raise HTTPException(status_code=500, detail="Something went wrong generating the answer.")
+    result["cached"] = False
     _cache[key] = result
     return result
 
