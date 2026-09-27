@@ -1,0 +1,953 @@
+{
+  "nodes": [
+    {
+      "id": "P01",
+      "label": "Dr. B.R. Ambedkar",
+      "type": "person",
+      "description": "Central node \u2014 Chairman, Drafting Committee; author of the Draft Constitution"
+    },
+    {
+      "id": "P02",
+      "label": "Naziruddin Ahmad",
+      "type": "person",
+      "description": "Assembly member; raised concern on interpretation of the word 'law'"
+    },
+    {
+      "id": "P03",
+      "label": "Mohd. Tahir",
+      "type": "person",
+      "description": "Assembly member; raised protection from untouchability concern"
+    },
+    {
+      "id": "P04",
+      "label": "Saiyid Jafar Imam",
+      "type": "person",
+      "description": "Assembly member; co-raised untouchability protection concern"
+    },
+    {
+      "id": "P05",
+      "label": "K. T. Shah",
+      "type": "person",
+      "description": "Assembly member; raised Non-segregation of SC/ST and Freedom to the Press points"
+    },
+    {
+      "id": "P06",
+      "label": "S. Nagappa",
+      "type": "person",
+      "description": "Assembly member; raised access to public places concern"
+    },
+    {
+      "id": "P07",
+      "label": "B. G. Kher",
+      "type": "person",
+      "description": "Assembly member; co-raised access to public places concern"
+    },
+    {
+      "id": "P08",
+      "label": "H. V. Kamath",
+      "type": "person",
+      "description": "Assembly member; raised Right to Bear Arms as Fundamental Right"
+    },
+    {
+      "id": "P09",
+      "label": "Jaipal Singh",
+      "type": "person",
+      "description": "Assembly member; raised Scheduled Tribe terminology and tribal area protections"
+    },
+    {
+      "id": "P10",
+      "label": "Sardar Hukam Singh",
+      "type": "person",
+      "description": "Assembly member; raised SC/ST unreserved seats, reserved constituencies, minority safeguards"
+    },
+    {
+      "id": "P11",
+      "label": "V. I. Muniswamy Pillai",
+      "type": "person",
+      "description": "Assembly member; raised population basis for reserved representation"
+    },
+    {
+      "id": "P12",
+      "label": "N. C. Laskar",
+      "type": "person",
+      "description": "Assembly member; raised reserved constituencies composition"
+    },
+    {
+      "id": "T01",
+      "label": "Constitution/Governance",
+      "type": "theme"
+    },
+    {
+      "id": "T02",
+      "label": "Federalism",
+      "type": "theme"
+    },
+    {
+      "id": "T03",
+      "label": "Fundamental Rights",
+      "type": "theme"
+    },
+    {
+      "id": "T04",
+      "label": "Caste/Equality",
+      "type": "theme"
+    },
+    {
+      "id": "T05",
+      "label": "Tribal Rights",
+      "type": "theme"
+    },
+    {
+      "id": "T06",
+      "label": "Reservations",
+      "type": "theme"
+    },
+    {
+      "id": "T07",
+      "label": "Minorities",
+      "type": "theme"
+    },
+    {
+      "id": "INST01",
+      "label": "Drafting Committee",
+      "type": "institution",
+      "description": "Body chaired by Ambedkar responsible for preparing the Draft Constitution."
+    },
+    {
+      "id": "INST02",
+      "label": "Government of India Act, 1935",
+      "type": "institution",
+      "description": "Prior colonial-era legislation whose administrative provisions and Scheduled Tribe enumeration were referenced in drafting the Constitution."
+    },
+    {
+      "id": "INST03",
+      "label": "Comparative Federal Models (US & Australia)",
+      "type": "institution",
+      "description": "American and Australian constitutional/federal structures Ambedkar repeatedly compared India's Draft against, on federalism and amendment procedure."
+    },
+    {
+      "id": "I01",
+      "label": "Introduction of Draft Constitution",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Drafting Committee",
+      "summary": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution"
+    },
+    {
+      "id": "I02",
+      "label": "Form of Government",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Parliamentary system / Executive",
+      "summary": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitution/Governance"
+    },
+    {
+      "id": "I03",
+      "label": "Dual Polity and Single Citizenship",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Union and States",
+      "summary": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I04",
+      "label": "Indian vs American Federalism",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "United States / American Constitution",
+      "summary": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I05",
+      "label": "Flexible Federalism",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Australian Constitution",
+      "summary": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism"
+    },
+    {
+      "id": "I06",
+      "label": "Union of States",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "States/Union",
+      "summary": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession.",
+      "theme": "Federalism",
+      "raw_theme": "Federalism/National Unity"
+    },
+    {
+      "id": "I07",
+      "label": "Government of India Act provisions",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Government of India Act, 1935",
+      "summary": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Administration/Constitution"
+    },
+    {
+      "id": "I08",
+      "label": "Fundamental Rights",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Fundamental Rights framework",
+      "summary": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I09",
+      "label": "Directive Principles",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "Legislature/Executive",
+      "summary": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Directive Principles"
+    },
+    {
+      "id": "I10",
+      "label": "Constitutional Amendment",
+      "type": "intervention",
+      "date": "1948-11-04",
+      "volume": "VII",
+      "mentioned": "American & Australian Constitutions",
+      "summary": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Design"
+    },
+    {
+      "id": "I11",
+      "label": "Interpretation of 'Law'",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "Naziruddin Ahmad",
+      "summary": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation.",
+      "theme": "Constitution/Governance",
+      "raw_theme": "Constitutional Interpretation"
+    },
+    {
+      "id": "I12",
+      "label": "State Funds & Fundamental Rights",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "State/Local Authorities",
+      "summary": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I13",
+      "label": "Protection from Untouchability",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "Mohd. Tahir / Saiyid Jafar Imam",
+      "summary": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I14",
+      "label": "Non-segregation of SC/ST",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "K. T. Shah",
+      "summary": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I15",
+      "label": "Access to public places",
+      "type": "intervention",
+      "date": "1948-11-29",
+      "volume": "VII",
+      "mentioned": "S. Nagappa / B. G. Kher",
+      "summary": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds.",
+      "theme": "Caste/Equality",
+      "raw_theme": "Caste/Equality"
+    },
+    {
+      "id": "I16",
+      "label": "Freedom to the Press",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "K. T. Shah",
+      "summary": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I17",
+      "label": "Right to Bear Arms",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "H. V. Kamath",
+      "summary": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I18",
+      "label": "Scheduled Tribe Terminology",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Jaipal Singh",
+      "summary": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights"
+    },
+    {
+      "id": "I19",
+      "label": "Legal Definition of Scheduled Tribes",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Government of India Act, 1935",
+      "summary": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights/Law"
+    },
+    {
+      "id": "I20",
+      "label": "Tribal Area Protections",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "Jaipal Singh / Scheduled Tribes",
+      "summary": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area.",
+      "theme": "Tribal Rights",
+      "raw_theme": "Tribal Rights"
+    },
+    {
+      "id": "I21",
+      "label": "Fundamental Rights & State Restrictions",
+      "type": "intervention",
+      "date": "1948-12-02",
+      "volume": "VII",
+      "mentioned": "State/Legislature",
+      "summary": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute.",
+      "theme": "Fundamental Rights",
+      "raw_theme": "Fundamental Rights"
+    },
+    {
+      "id": "I22",
+      "label": "Reserved Seats for SC/ST",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Scheduled Castes & Scheduled Tribes",
+      "summary": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations"
+    },
+    {
+      "id": "I23",
+      "label": "SC/ST in Unreserved Seats",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Sardar Hukam Singh",
+      "summary": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Representation"
+    },
+    {
+      "id": "I24",
+      "label": "Population for Reserved Representation",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "V. I. Muniswamy Pillai",
+      "summary": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Representation"
+    },
+    {
+      "id": "I25",
+      "label": "Reserved Constituencies",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "N. C. Laskar / Sardar Hukam Singh",
+      "summary": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations/Elections"
+    },
+    {
+      "id": "I26",
+      "label": "SC/ST Legislative Representation",
+      "type": "intervention",
+      "date": "1949-08-24",
+      "volume": "IX",
+      "mentioned": "Advisory Committee",
+      "summary": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation.",
+      "theme": "Reservations",
+      "raw_theme": "Reservations"
+    },
+    {
+      "id": "I27",
+      "label": "Minority Safeguards",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Muslims & Christians",
+      "summary": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities"
+    },
+    {
+      "id": "I28",
+      "label": "Legislative Reservation vs Services",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Sardar Hukam Singh",
+      "summary": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities/Public Employment"
+    },
+    {
+      "id": "I29",
+      "label": "Minority Safeguards Monitoring",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Special Officer for Minorities",
+      "summary": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President.",
+      "theme": "Minorities",
+      "raw_theme": "Minorities/Constitutional Safeguards"
+    },
+    {
+      "id": "I30",
+      "label": "Advisory Committee Decisions",
+      "type": "intervention",
+      "date": "1949-08-26",
+      "volume": "IX",
+      "mentioned": "Advisory Committee / Drafting Committee",
+      "summary": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards.",
+      "theme": "Minorities",
+      "raw_theme": "Constitution/Minorities"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P01",
+      "target": "I01",
+      "relationship": "intervened in",
+      "justification": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee."
+    },
+    {
+      "source": "I01",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Introduction of Draft Constitution' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I02",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems."
+    },
+    {
+      "source": "I02",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Form of Government' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I03",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship."
+    },
+    {
+      "source": "I03",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Dual Polity and Single Citizenship' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I04",
+      "relationship": "intervened in",
+      "justification": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations."
+    },
+    {
+      "source": "I04",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Indian vs American Federalism' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I05",
+      "relationship": "intervened in",
+      "justification": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity."
+    },
+    {
+      "source": "I05",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Flexible Federalism' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I06",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession."
+    },
+    {
+      "source": "I06",
+      "target": "T02",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Union of States' is categorized under Federalism."
+    },
+    {
+      "source": "P01",
+      "target": "I07",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft."
+    },
+    {
+      "source": "I07",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Government of India Act provisions' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I08",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations."
+    },
+    {
+      "source": "I08",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Fundamental Rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I09",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant."
+    },
+    {
+      "source": "I09",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Directive Principles' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I10",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations."
+    },
+    {
+      "source": "I10",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Constitutional Amendment' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P01",
+      "target": "I11",
+      "relationship": "intervened in",
+      "justification": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation."
+    },
+    {
+      "source": "I11",
+      "target": "T01",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Interpretation of 'Law'' is categorized under Constitution/Governance."
+    },
+    {
+      "source": "P02",
+      "target": "I11",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation."
+    },
+    {
+      "source": "P01",
+      "target": "I12",
+      "relationship": "intervened in",
+      "justification": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments."
+    },
+    {
+      "source": "I12",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'State Funds & Fundamental Rights' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I13",
+      "relationship": "intervened in",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "I13",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Protection from Untouchability' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P03",
+      "target": "I13",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "P04",
+      "target": "I13",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection."
+    },
+    {
+      "source": "P01",
+      "target": "I14",
+      "relationship": "intervened in",
+      "justification": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public."
+    },
+    {
+      "source": "I14",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Non-segregation of SC/ST' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P05",
+      "target": "I14",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public."
+    },
+    {
+      "source": "P01",
+      "target": "I15",
+      "relationship": "intervened in",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "I15",
+      "target": "T04",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Access to public places' is categorized under Caste/Equality."
+    },
+    {
+      "source": "P06",
+      "target": "I15",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "P07",
+      "target": "I15",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds."
+    },
+    {
+      "source": "P01",
+      "target": "I16",
+      "relationship": "intervened in",
+      "justification": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression."
+    },
+    {
+      "source": "I16",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Freedom to the Press' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P05",
+      "target": "I16",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression."
+    },
+    {
+      "source": "P01",
+      "target": "I17",
+      "relationship": "intervened in",
+      "justification": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security."
+    },
+    {
+      "source": "I17",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Right to Bear Arms' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P08",
+      "target": "I17",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security."
+    },
+    {
+      "source": "P01",
+      "target": "I18",
+      "relationship": "intervened in",
+      "justification": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning."
+    },
+    {
+      "source": "I18",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Scheduled Tribe Terminology' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P09",
+      "target": "I18",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning."
+    },
+    {
+      "source": "P01",
+      "target": "I19",
+      "relationship": "intervened in",
+      "justification": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories."
+    },
+    {
+      "source": "I19",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Legal Definition of Scheduled Tribes' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I20",
+      "relationship": "intervened in",
+      "justification": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area."
+    },
+    {
+      "source": "I20",
+      "target": "T05",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Tribal Area Protections' is categorized under Tribal Rights."
+    },
+    {
+      "source": "P09",
+      "target": "I20",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area."
+    },
+    {
+      "source": "P01",
+      "target": "I21",
+      "relationship": "intervened in",
+      "justification": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute."
+    },
+    {
+      "source": "I21",
+      "target": "T03",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Fundamental Rights & State Restrictions' is categorized under Fundamental Rights."
+    },
+    {
+      "source": "P01",
+      "target": "I22",
+      "relationship": "intervened in",
+      "justification": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam."
+    },
+    {
+      "source": "I22",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Reserved Seats for SC/ST' is categorized under Reservations."
+    },
+    {
+      "source": "P01",
+      "target": "I23",
+      "relationship": "intervened in",
+      "justification": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law."
+    },
+    {
+      "source": "I23",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'SC/ST in Unreserved Seats' is categorized under Reservations."
+    },
+    {
+      "source": "P10",
+      "target": "I23",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law."
+    },
+    {
+      "source": "P01",
+      "target": "I24",
+      "relationship": "intervened in",
+      "justification": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength."
+    },
+    {
+      "source": "I24",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Population for Reserved Representation' is categorized under Reservations."
+    },
+    {
+      "source": "P11",
+      "target": "I24",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength."
+    },
+    {
+      "source": "P01",
+      "target": "I25",
+      "relationship": "intervened in",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "I25",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Reserved Constituencies' is categorized under Reservations."
+    },
+    {
+      "source": "P12",
+      "target": "I25",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "P10",
+      "target": "I25",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats."
+    },
+    {
+      "source": "P01",
+      "target": "I26",
+      "relationship": "intervened in",
+      "justification": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation."
+    },
+    {
+      "source": "I26",
+      "target": "T06",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'SC/ST Legislative Representation' is categorized under Reservations."
+    },
+    {
+      "source": "P01",
+      "target": "I27",
+      "relationship": "intervened in",
+      "justification": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion."
+    },
+    {
+      "source": "I27",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Minority Safeguards' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "I28",
+      "relationship": "intervened in",
+      "justification": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services."
+    },
+    {
+      "source": "I28",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Legislative Reservation vs Services' is categorized under Minorities."
+    },
+    {
+      "source": "P10",
+      "target": "I28",
+      "relationship": "raised concern addressed by Ambedkar",
+      "justification": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services."
+    },
+    {
+      "source": "P01",
+      "target": "I29",
+      "relationship": "intervened in",
+      "justification": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President."
+    },
+    {
+      "source": "I29",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Minority Safeguards Monitoring' is categorized under Minorities."
+    },
+    {
+      "source": "P01",
+      "target": "I30",
+      "relationship": "intervened in",
+      "justification": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards."
+    },
+    {
+      "source": "I30",
+      "target": "T07",
+      "relationship": "relates to theme",
+      "justification": "Intervention 'Advisory Committee Decisions' is categorized under Minorities."
+    },
+    {
+      "source": "I01",
+      "target": "INST01",
+      "relationship": "references institution",
+      "justification": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee."
+    },
+    {
+      "source": "I30",
+      "target": "INST01",
+      "relationship": "references institution",
+      "justification": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards."
+    },
+    {
+      "source": "I07",
+      "target": "INST02",
+      "relationship": "references institution",
+      "justification": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft."
+    },
+    {
+      "source": "I19",
+      "target": "INST02",
+      "relationship": "references institution",
+      "justification": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories."
+    },
+    {
+      "source": "I04",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations."
+    },
+    {
+      "source": "I05",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity."
+    },
+    {
+      "source": "I10",
+      "target": "INST03",
+      "relationship": "references institution",
+      "justification": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations."
+    }
+  ]
+}
