@@ -1,6 +1,6 @@
 "use client";
-import { Suspense, useState, useEffect, useCallback } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 
 const API_BASE = "http://localhost:8000";
 
@@ -8,28 +8,21 @@ const API_BASE = "http://localhost:8000";
 const fieldStyle = { padding: "0.6rem", minHeight: 44, fontSize: "1rem" };
 const btnStyle = { padding: "0.6rem 1rem", minHeight: 44, fontWeight: 600, cursor: "pointer" };
 
-function DebatesPageInner() {
-  const searchParams = useSearchParams();
-
-  // Seed filters from the incoming URL on first load, so links from the
-  // graph (?theme=..., ?date=..., ?volume=...) and any direct ?topic=...
-  // or ?article=... link land pre-filled. `topic` wins over `theme` when
-  // both are present -- `theme` is Shreya's graph param name, `topic` is
-  // the Debates Explorer's own name for the same filter.
-  const [date, setDate] = useState(() => searchParams.get("date") || "");
-  const [volume, setVolume] = useState(() => searchParams.get("volume") || "");
-  const [topic, setTopic] = useState(
-    () => searchParams.get("topic") || searchParams.get("theme") || ""
-  );
-  const [article, setArticle] = useState(() => searchParams.get("article") || "");
+export default function DebatesPage() {
+  const [date, setDate] = useState("");
+  const [volume, setVolume] = useState("");
+  const [topic, setTopic] = useState("");
+  const [article, setArticle] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [results, setResults] = useState(null);
   const router = useRouter();
   const [slow, setSlow] = useState(false);
 
-const handleSearch = useCallback(async (e) => {
-  if (e) e.preventDefault();
+// Takes explicit filter values so Reset can search with cleared filters
+// immediately (state updates are async, so reading state here would be stale).
+const runSearch = useCallback(async (filters) => {
+  const { date, volume, topic, article } = filters;
   setLoading(true);
   setError(null);
   setSlow(false);
@@ -85,17 +78,18 @@ const handleSearch = useCallback(async (e) => {
     setSlow(false);
     setLoading(false);
   }
-}, [date, volume, topic, article]);
+}, []);
 
-  // Runs once on mount. Since date/volume/topic/article are already seeded
-  // from the URL above (if present), this single call both (a) loads
-  // everything by default when there's no query string, and (b) auto-runs
-  // the search for graph deep links -- no separate effect needed.
+  function handleSearch(e) {
+    if (e) e.preventDefault();
+    runSearch({ date, volume, topic, article });
+  }
+
+  // Load everything once on mount so the Explorer isn't blank on arrival.
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
-    handleSearch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    runSearch({ date: "", volume: "", topic: "", article: "" });
+  }, [runSearch]);
 
   function handleReset() {
     setDate("");
@@ -103,7 +97,7 @@ const handleSearch = useCallback(async (e) => {
     setTopic("");
     setArticle("");
     setError(null);
-    setTimeout(() => handleSearch(), 0);
+    runSearch({ date: "", volume: "", topic: "", article: "" });
   }
 
   function askAboutThis(title, date) {
@@ -211,16 +205,5 @@ const handleSearch = useCallback(async (e) => {
         </>
       )}
     </div>
-  );
-}
-
-// useSearchParams() requires a Suspense boundary in the App Router, or the
-// production build fails during prerendering (same issue as /ask). This
-// wrapper is the only reason DebatesPageInner isn't the default export.
-export default function DebatesPage() {
-  return (
-    <Suspense fallback={<div style={{ maxWidth: 800, margin: "0 auto" }}>Loading…</div>}>
-      <DebatesPageInner />
-    </Suspense>
   );
 }
