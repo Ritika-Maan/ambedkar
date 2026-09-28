@@ -4,136 +4,232 @@
       "id": "P01",
       "label": "Dr. B.R. Ambedkar",
       "type": "person",
-      "description": "Central node \u2014 Chairman, Drafting Committee; author of the Draft Constitution"
+      "description": "Central node — Chairman, Drafting Committee; author of the Draft Constitution",
+      "click_through": {
+        "summary": "Central node — Chairman, Drafting Committee; author of the Draft Constitution",
+        "deep_link": "/ask?q=What%20did%20Dr.%20B.R.%20Ambedkar%20say%20about%20Constitution/Governance%2C%20Fundamental%20Rights%20and%20Federalism%3F"
+      }
     },
     {
       "id": "P02",
       "label": "Naziruddin Ahmad",
       "type": "person",
-      "description": "Assembly member; raised concern on interpretation of the word 'law'"
+      "description": "Assembly member; raised concern on interpretation of the word 'law'",
+      "click_through": {
+        "summary": "Assembly member; raised concern on interpretation of the word 'law'",
+        "deep_link": "/ask?q=What%20did%20Naziruddin%20Ahmad%20say%20about%20Constitution/Governance%3F"
+      }
     },
     {
       "id": "P03",
       "label": "Mohd. Tahir",
       "type": "person",
-      "description": "Assembly member; raised protection from untouchability concern"
+      "description": "Assembly member; raised protection from untouchability concern",
+      "click_through": {
+        "summary": "Assembly member; raised protection from untouchability concern",
+        "deep_link": "/ask?q=What%20did%20Mohd.%20Tahir%20say%20about%20Caste/Equality%3F"
+      }
     },
     {
       "id": "P04",
       "label": "Saiyid Jafar Imam",
       "type": "person",
-      "description": "Assembly member; co-raised untouchability protection concern"
+      "description": "Assembly member; co-raised untouchability protection concern",
+      "click_through": {
+        "summary": "Assembly member; co-raised untouchability protection concern",
+        "deep_link": "/ask?q=What%20did%20Saiyid%20Jafar%20Imam%20say%20about%20Caste/Equality%3F"
+      }
     },
     {
       "id": "P05",
       "label": "K. T. Shah",
       "type": "person",
-      "description": "Assembly member; raised Non-segregation of SC/ST and Freedom to the Press points"
+      "description": "Assembly member; raised Non-segregation of SC/ST and Freedom to the Press points",
+      "click_through": {
+        "summary": "Assembly member; raised Non-segregation of SC/ST and Freedom to the Press points",
+        "deep_link": "/ask?q=What%20did%20K.%20T.%20Shah%20say%20about%20Caste/Equality%3F"
+      }
     },
     {
       "id": "P06",
       "label": "S. Nagappa",
       "type": "person",
-      "description": "Assembly member; raised access to public places concern"
+      "description": "Assembly member; raised access to public places concern",
+      "click_through": {
+        "summary": "Assembly member; raised access to public places concern",
+        "deep_link": "/ask?q=What%20did%20S.%20Nagappa%20say%20about%20Caste/Equality%3F"
+      }
     },
     {
       "id": "P07",
       "label": "B. G. Kher",
       "type": "person",
-      "description": "Assembly member; co-raised access to public places concern"
+      "description": "Assembly member; co-raised access to public places concern",
+      "click_through": {
+        "summary": "Assembly member; co-raised access to public places concern",
+        "deep_link": "/ask?q=What%20did%20B.%20G.%20Kher%20say%20about%20Caste/Equality%3F"
+      }
     },
     {
       "id": "P08",
       "label": "H. V. Kamath",
       "type": "person",
-      "description": "Assembly member; raised Right to Bear Arms as Fundamental Right"
+      "description": "Assembly member; raised Right to Bear Arms as Fundamental Right",
+      "click_through": {
+        "summary": "Assembly member; raised Right to Bear Arms as Fundamental Right",
+        "deep_link": "/ask?q=What%20did%20H.%20V.%20Kamath%20say%20about%20Fundamental%20Rights%3F"
+      }
     },
     {
       "id": "P09",
       "label": "Jaipal Singh",
       "type": "person",
-      "description": "Assembly member; raised Scheduled Tribe terminology and tribal area protections"
+      "description": "Assembly member; raised Scheduled Tribe terminology and tribal area protections",
+      "click_through": {
+        "summary": "Assembly member; raised Scheduled Tribe terminology and tribal area protections",
+        "deep_link": "/ask?q=What%20did%20Jaipal%20Singh%20say%20about%20Tribal%20Rights%3F"
+      }
     },
     {
       "id": "P10",
       "label": "Sardar Hukam Singh",
       "type": "person",
-      "description": "Assembly member; raised SC/ST unreserved seats, reserved constituencies, minority safeguards"
+      "description": "Assembly member; raised SC/ST unreserved seats, reserved constituencies, minority safeguards",
+      "click_through": {
+        "summary": "Assembly member; raised SC/ST unreserved seats, reserved constituencies, minority safeguards",
+        "deep_link": "/ask?q=What%20did%20Sardar%20Hukam%20Singh%20say%20about%20Reservations%3F"
+      }
     },
     {
       "id": "P11",
       "label": "V. I. Muniswamy Pillai",
       "type": "person",
-      "description": "Assembly member; raised population basis for reserved representation"
+      "description": "Assembly member; raised population basis for reserved representation",
+      "click_through": {
+        "summary": "Assembly member; raised population basis for reserved representation",
+        "deep_link": "/ask?q=What%20did%20V.%20I.%20Muniswamy%20Pillai%20say%20about%20Reservations%3F"
+      }
     },
     {
       "id": "P12",
       "label": "N. C. Laskar",
       "type": "person",
-      "description": "Assembly member; raised reserved constituencies composition"
+      "description": "Assembly member; raised reserved constituencies composition",
+      "click_through": {
+        "summary": "Assembly member; raised reserved constituencies composition",
+        "deep_link": "/ask?q=What%20did%20N.%20C.%20Laskar%20say%20about%20Reservations%3F"
+      }
     },
     {
       "id": "T01",
       "label": "Constitution/Governance",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Constitution/Governance",
+        "deep_link": "/debates?theme=Constitution/Governance"
+      }
     },
     {
       "id": "T02",
       "label": "Federalism",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Federalism",
+        "deep_link": "/debates?theme=Federalism"
+      }
     },
     {
       "id": "T03",
       "label": "Fundamental Rights",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Fundamental Rights",
+        "deep_link": "/debates?theme=Fundamental%20Rights"
+      }
     },
     {
       "id": "T04",
       "label": "Caste/Equality",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Caste/Equality",
+        "deep_link": "/debates?theme=Caste/Equality"
+      }
     },
     {
       "id": "T05",
       "label": "Tribal Rights",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Tribal Rights",
+        "deep_link": "/debates?theme=Tribal%20Rights"
+      }
     },
     {
       "id": "T06",
       "label": "Reservations",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Reservations",
+        "deep_link": "/debates?theme=Reservations"
+      }
     },
     {
       "id": "T07",
       "label": "Minorities",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Minorities",
+        "deep_link": "/debates?theme=Minorities"
+      }
     },
     {
       "id": "T08",
       "label": "Religion",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Religion",
+        "deep_link": "/debates?theme=Religion"
+      }
     },
     {
       "id": "T09",
       "label": "Citizenship",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Citizenship",
+        "deep_link": "/debates?theme=Citizenship"
+      }
     },
     {
       "id": "INST01",
       "label": "Drafting Committee",
       "type": "institution",
-      "description": "Body chaired by Ambedkar responsible for preparing the Draft Constitution."
+      "description": "Body chaired by Ambedkar responsible for preparing the Draft Constitution.",
+      "click_through": {
+        "summary": "Body chaired by Ambedkar responsible for preparing the Draft Constitution.",
+        "deep_link": "/ask?q=What%20role%20did%20Drafting%20Committee%20play%20in%20the%20Constituent%20Assembly%20debates%3F"
+      }
     },
     {
       "id": "INST02",
       "label": "Government of India Act, 1935",
       "type": "institution",
-      "description": "Prior colonial-era legislation whose administrative provisions and Scheduled Tribe enumeration were referenced in drafting the Constitution."
+      "description": "Prior colonial-era legislation whose administrative provisions and Scheduled Tribe enumeration were referenced in drafting the Constitution.",
+      "click_through": {
+        "summary": "Prior colonial-era legislation whose administrative provisions and Scheduled Tribe enumeration were referenced in drafting the Constitution.",
+        "deep_link": "/ask?q=What%20role%20did%20Government%20of%20India%20Act%2C%201935%20play%20in%20the%20Constituent%20Assembly%20debates%3F"
+      }
     },
     {
       "id": "INST03",
       "label": "Comparative Federal Models (US & Australia)",
       "type": "institution",
-      "description": "American and Australian constitutional/federal structures Ambedkar repeatedly compared India's Draft against, on federalism and amendment procedure."
+      "description": "American and Australian constitutional/federal structures Ambedkar repeatedly compared India's Draft against, on federalism and amendment procedure.",
+      "click_through": {
+        "summary": "American and Australian constitutional/federal structures Ambedkar repeatedly compared India's Draft against, on federalism and amendment procedure.",
+        "deep_link": "/ask?q=What%20role%20did%20Comparative%20Federal%20Models%20%28US%20%26%20Australia%29%20play%20in%20the%20Constituent%20Assembly%20debates%3F"
+      }
     },
     {
       "id": "W01",
@@ -143,7 +239,11 @@
       "pages": "1-22",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "Ambedkar argues caste is created by superimposing endogamy on an originally exogamous population, and spreads through imitation of the Brahmin caste's closed-door practice; he critiques occupation-based, tribal-survival, and other prior theories of caste as inadequate.",
-      "theme": "Caste/Equality"
+      "theme": "Caste/Equality",
+      "click_through": {
+        "summary": "Ambedkar argues caste is created by superimposing endogamy on an originally exogamous population, and spreads through imitation of the Brahmin caste's closed-door practice; he critiques occupation-based, tribal-survival, and other prior theories of caste as inadequate.",
+        "deep_link": "/ask?q=Summarize%20Castes%20in%20India%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "W02",
@@ -153,7 +253,11 @@
       "pages": "23-98",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "Preface to Ambedkar's speech written for the Jat-Pat-Todak Mandal of Lahore (undelivered, as the Mandal withdrew its invitation over the content); describes its reception and translations, and includes his direct rebuttal to Gandhi's public criticism of the speech.",
-      "theme": "Caste/Equality"
+      "theme": "Caste/Equality",
+      "click_through": {
+        "summary": "Preface to Ambedkar's speech written for the Jat-Pat-Todak Mandal of Lahore (undelivered, as the Mandal withdrew its invitation over the content); describes its reception and translations, and includes his direct rebuttal to Gandhi's public criticism of the speech.",
+        "deep_link": "/ask?q=Summarize%20Annihilation%20of%20Caste%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "I01",
@@ -164,7 +268,11 @@
       "mentioned": "Drafting Committee",
       "summary": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution"
+      "raw_theme": "Constitution",
+      "click_through": {
+        "summary": "Ambedkar presented the Draft Constitution and explained the work and responsibility of the Drafting Committee.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I02",
@@ -175,7 +283,11 @@
       "mentioned": "Parliamentary system / Executive",
       "summary": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution/Governance"
+      "raw_theme": "Constitution/Governance",
+      "click_through": {
+        "summary": "Ambedkar explained the form of government proposed in the Draft and distinguished it from presidential systems.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I03",
@@ -186,7 +298,11 @@
       "mentioned": "Union and States",
       "summary": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship.",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Ambedkar explained that India would have a dual polity but a single citizenship, without separate State citizenship.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I04",
@@ -197,7 +313,11 @@
       "mentioned": "United States / American Constitution",
       "summary": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations.",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Ambedkar compared India's proposed federal structure with the American model and highlighted differences in Centre-State relations.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I05",
@@ -208,7 +328,11 @@
       "mentioned": "Australian Constitution",
       "summary": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity.",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Ambedkar compared the Draft's federal arrangements with Australia's and explained mechanisms intended to reduce excessive rigidity.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I06",
@@ -219,7 +343,11 @@
       "mentioned": "States/Union",
       "summary": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession.",
       "theme": "Federalism",
-      "raw_theme": "Federalism/National Unity"
+      "raw_theme": "Federalism/National Unity",
+      "click_through": {
+        "summary": "Ambedkar explained why India was described as a 'Union' and why States would not possess a right of secession.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I07",
@@ -230,7 +358,11 @@
       "mentioned": "Government of India Act, 1935",
       "summary": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Administration/Constitution"
+      "raw_theme": "Administration/Constitution",
+      "click_through": {
+        "summary": "Ambedkar explained why certain administrative provisions from the 1935 Act were incorporated into the Draft.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I08",
@@ -241,7 +373,11 @@
       "mentioned": "Fundamental Rights framework",
       "summary": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Ambedkar defended the Draft's formulation of Fundamental Rights and its approach to reasonable limitations.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I09",
@@ -252,7 +388,11 @@
       "mentioned": "Legislature/Executive",
       "summary": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Directive Principles"
+      "raw_theme": "Directive Principles",
+      "click_through": {
+        "summary": "Ambedkar explained that Directive Principles were not enforceable by courts but would guide governments and be politically significant.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I10",
@@ -263,7 +403,11 @@
       "mentioned": "American & Australian Constitutions",
       "summary": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Design"
+      "raw_theme": "Constitutional Design",
+      "click_through": {
+        "summary": "Ambedkar defended the Draft's amendment procedure by comparing it with the more elaborate procedures of other federations.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I11",
@@ -274,7 +418,11 @@
       "mentioned": "Naziruddin Ahmad",
       "summary": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Interpretation"
+      "raw_theme": "Constitutional Interpretation",
+      "click_through": {
+        "summary": "Ambedkar responded to Ahmad's concern about the meaning of 'law' and proposed wording to avoid an unintended interpretation.",
+        "deep_link": "/debates?date=1948-11-29&volume=VII"
+      }
     },
     {
       "id": "I12",
@@ -285,7 +433,11 @@
       "mentioned": "State/Local Authorities",
       "summary": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Ambedkar proposed replacing 'revenues of the State' with 'State funds' so the provision would cover local authorities as well as governments.",
+        "deep_link": "/debates?date=1948-11-29&volume=VII"
+      }
     },
     {
       "id": "I13",
@@ -296,7 +448,11 @@
       "mentioned": "Mohd. Tahir / Saiyid Jafar Imam",
       "summary": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection.",
       "theme": "Caste/Equality",
-      "raw_theme": "Caste/Equality"
+      "raw_theme": "Caste/Equality",
+      "click_through": {
+        "summary": "Ambedkar agreed with the objective of ensuring that untouchable communities could access public places without discrimination, while discussing the legal form of the protection.",
+        "deep_link": "/debates?date=1948-11-29&volume=VII"
+      }
     },
     {
       "id": "I14",
@@ -307,7 +463,11 @@
       "mentioned": "K. T. Shah",
       "summary": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public.",
       "theme": "Caste/Equality",
-      "raw_theme": "Caste/Equality"
+      "raw_theme": "Caste/Equality",
+      "click_through": {
+        "summary": "Ambedkar opposed wording that could allow 'special provisions' to become a basis for segregating Scheduled Castes and Scheduled Tribes from the general public.",
+        "deep_link": "/debates?date=1948-11-29&volume=VII"
+      }
     },
     {
       "id": "I15",
@@ -318,7 +478,11 @@
       "mentioned": "S. Nagappa / B. G. Kher",
       "summary": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds.",
       "theme": "Caste/Equality",
-      "raw_theme": "Caste/Equality"
+      "raw_theme": "Caste/Equality",
+      "click_through": {
+        "summary": "Ambedkar clarified the meaning of 'shop' and related public facilities so that services could not be denied on discriminatory grounds.",
+        "deep_link": "/debates?date=1948-11-29&volume=VII"
+      }
     },
     {
       "id": "I16",
@@ -329,7 +493,11 @@
       "mentioned": "K. T. Shah",
       "summary": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Ambedkar argued that a separate constitutional right for the press was unnecessary because the press exercises the citizen's freedom of expression.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I17",
@@ -340,7 +508,11 @@
       "mentioned": "H. V. Kamath",
       "summary": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Ambedkar opposed making unrestricted possession of arms a Fundamental Right and explained the implications for public administration and security.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I18",
@@ -351,7 +523,11 @@
       "mentioned": "Jaipal Singh",
       "summary": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning.",
       "theme": "Tribal Rights",
-      "raw_theme": "Tribal Rights"
+      "raw_theme": "Tribal Rights",
+      "click_through": {
+        "summary": "Ambedkar explained why 'Scheduled Tribe' was preferred over the broader term 'Adibasi/aboriginal', emphasizing its defined legal meaning.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I19",
@@ -362,7 +538,11 @@
       "mentioned": "Government of India Act, 1935",
       "summary": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories.",
       "theme": "Tribal Rights",
-      "raw_theme": "Tribal Rights/Law"
+      "raw_theme": "Tribal Rights/Law",
+      "click_through": {
+        "summary": "Ambedkar referred to the earlier use of enumerated communities to give legal meaning to otherwise broad social categories.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I20",
@@ -373,7 +553,11 @@
       "mentioned": "Jaipal Singh / Scheduled Tribes",
       "summary": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area.",
       "theme": "Tribal Rights",
-      "raw_theme": "Tribal Rights"
+      "raw_theme": "Tribal Rights",
+      "click_through": {
+        "summary": "Ambedkar addressed whether protections attached to a Scheduled Tribe member would continue after migration outside a scheduled or tribal area.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I21",
@@ -384,7 +568,11 @@
       "mentioned": "State/Legislature",
       "summary": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Ambedkar defended the Draft's approach of allowing specified limitations on Fundamental Rights rather than treating them as completely absolute.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I22",
@@ -395,7 +583,11 @@
       "mentioned": "Scheduled Castes & Scheduled Tribes",
       "summary": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam.",
       "theme": "Reservations",
-      "raw_theme": "Reservations"
+      "raw_theme": "Reservations",
+      "click_through": {
+        "summary": "Ambedkar moved the provision reserving seats for SC/ST in State Legislative Assemblies, with specific treatment for tribal areas of Assam.",
+        "deep_link": "/debates?date=1949-08-24&volume=IX"
+      }
     },
     {
       "id": "I23",
@@ -406,7 +598,11 @@
       "mentioned": "Sardar Hukam Singh",
       "summary": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law.",
       "theme": "Reservations",
-      "raw_theme": "Reservations/Representation"
+      "raw_theme": "Reservations/Representation",
+      "click_through": {
+        "summary": "Ambedkar clarified that SC/ST candidates would also be entitled to contest unreserved seats; the matter would be addressed through election law.",
+        "deep_link": "/debates?date=1949-08-24&volume=IX"
+      }
     },
     {
       "id": "I24",
@@ -417,7 +613,11 @@
       "mentioned": "V. I. Muniswamy Pillai",
       "summary": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength.",
       "theme": "Reservations",
-      "raw_theme": "Reservations/Representation"
+      "raw_theme": "Reservations/Representation",
+      "click_through": {
+        "summary": "Ambedkar discussed how SC/ST population could be estimated for determining reserved representation, including the possibility of a fresh census or voter strength.",
+        "deep_link": "/debates?date=1949-08-24&volume=IX"
+      }
     },
     {
       "id": "I25",
@@ -428,7 +628,11 @@
       "mentioned": "N. C. Laskar / Sardar Hukam Singh",
       "summary": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats.",
       "theme": "Reservations",
-      "raw_theme": "Reservations/Elections"
+      "raw_theme": "Reservations/Elections",
+      "click_through": {
+        "summary": "Ambedkar addressed proposals concerning the composition and territorial arrangement of constituencies containing reserved SC/ST seats.",
+        "deep_link": "/debates?date=1949-08-24&volume=IX"
+      }
     },
     {
       "id": "I26",
@@ -439,7 +643,11 @@
       "mentioned": "Advisory Committee",
       "summary": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation.",
       "theme": "Reservations",
-      "raw_theme": "Reservations"
+      "raw_theme": "Reservations",
+      "click_through": {
+        "summary": "Ambedkar relied on the Assembly's previously accepted Advisory Committee decisions concerning SC/ST representation.",
+        "deep_link": "/debates?date=1949-08-24&volume=IX"
+      }
     },
     {
       "id": "I27",
@@ -450,7 +658,11 @@
       "mentioned": "Muslims & Christians",
       "summary": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion.",
       "theme": "Minorities",
-      "raw_theme": "Minorities"
+      "raw_theme": "Minorities",
+      "click_through": {
+        "summary": "Ambedkar stated that the Assembly's later decision treated Muslims and Christians differently from SC/ST for the constitutional safeguards under discussion.",
+        "deep_link": "/debates?date=1949-08-26&volume=IX"
+      }
     },
     {
       "id": "I28",
@@ -461,7 +673,11 @@
       "mentioned": "Sardar Hukam Singh",
       "summary": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services.",
       "theme": "Minorities",
-      "raw_theme": "Minorities/Public Employment"
+      "raw_theme": "Minorities/Public Employment",
+      "click_through": {
+        "summary": "Ambedkar interpreted the Assembly's decision as removing the relevant privileges from groups no longer treated as minorities under that framework; Hukam Singh challenged whether this extended to services.",
+        "deep_link": "/debates?date=1949-08-26&volume=IX"
+      }
     },
     {
       "id": "I29",
@@ -472,7 +688,11 @@
       "mentioned": "Special Officer for Minorities",
       "summary": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President.",
       "theme": "Minorities",
-      "raw_theme": "Minorities/Constitutional Safeguards"
+      "raw_theme": "Minorities/Constitutional Safeguards",
+      "click_through": {
+        "summary": "Ambedkar proposed a Special Officer responsible for investigating matters relating to constitutional safeguards for minorities and reporting to the President.",
+        "deep_link": "/debates?date=1949-08-26&volume=IX"
+      }
     },
     {
       "id": "I30",
@@ -483,7 +703,11 @@
       "mentioned": "Advisory Committee / Drafting Committee",
       "summary": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards.",
       "theme": "Minorities",
-      "raw_theme": "Constitution/Minorities"
+      "raw_theme": "Constitution/Minorities",
+      "click_through": {
+        "summary": "Ambedkar linked the Drafting Committee's amendments to decisions previously reached by the Assembly and Advisory Committee on minority safeguards.",
+        "deep_link": "/debates?date=1949-08-26&volume=IX"
+      }
     },
     {
       "id": "I31",
@@ -494,7 +718,11 @@
       "mentioned": "Constitution",
       "summary": "Distinguished the Constituent Assembly from future Parliament when discussing constitutional amendment powers.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution"
+      "raw_theme": "Constitution",
+      "click_through": {
+        "summary": "Distinguished the Constituent Assembly from future Parliament when discussing constitutional amendment powers.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I32",
@@ -505,7 +733,11 @@
       "mentioned": "Federalism",
       "summary": "Explained the constitutional reasoning behind giving significant powers to the Union",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Explained the constitutional reasoning behind giving significant powers to the Union",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I33",
@@ -516,7 +748,11 @@
       "mentioned": "Constitutional Design",
       "summary": "Responded to criticism concerning the use of constitutional ideas from other countries",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Design"
+      "raw_theme": "Constitutional Design",
+      "click_through": {
+        "summary": "Responded to criticism concerning the use of constitutional ideas from other countries",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I34",
@@ -527,7 +763,11 @@
       "mentioned": "Directive Principles",
       "summary": "Explained their role even though they were not directly enforceable by courts.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Directive Principles"
+      "raw_theme": "Directive Principles",
+      "click_through": {
+        "summary": "Explained their role even though they were not directly enforceable by courts.",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I35",
@@ -538,7 +778,11 @@
       "mentioned": "Federalism",
       "summary": "Explained federalism as a division of legislative and executive powers between Union and States",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Explained federalism as a division of legislative and executive powers between Union and States",
+        "deep_link": "/debates?date=1948-11-04&volume=VII"
+      }
     },
     {
       "id": "I36",
@@ -549,7 +793,11 @@
       "mentioned": "Religion",
       "summary": "Responded to arguments concerning a common civil code and its relationship with religious communities",
       "theme": "Religion",
-      "raw_theme": "Religion"
+      "raw_theme": "Religion",
+      "click_through": {
+        "summary": "Responded to arguments concerning a common civil code and its relationship with religious communities",
+        "deep_link": "/debates?date=1948-11-23&volume=VII"
+      }
     },
     {
       "id": "I37",
@@ -560,7 +808,11 @@
       "mentioned": "Religion",
       "summary": "Discussed the constitutional treatment of personal laws and religious practices",
       "theme": "Religion",
-      "raw_theme": "Religion"
+      "raw_theme": "Religion",
+      "click_through": {
+        "summary": "Discussed the constitutional treatment of personal laws and religious practices",
+        "deep_link": "/debates?date=1948-11-23&volume=VII"
+      }
     },
     {
       "id": "I38",
@@ -571,7 +823,11 @@
       "mentioned": "Fundamental Rights",
       "summary": "Addressed the relationship between religious freedom and constitutional limitations",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Addressed the relationship between religious freedom and constitutional limitations",
+        "deep_link": "/debates?date=1948-11-23&volume=VII"
+      }
     },
     {
       "id": "I39",
@@ -582,7 +838,11 @@
       "mentioned": "Press Freedom",
       "summary": "Explained that the press did not require a separate fundamental right because press activity was covered by citizens' freedom of expression.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Press Freedom"
+      "raw_theme": "Press Freedom",
+      "click_through": {
+        "summary": "Explained that the press did not require a separate fundamental right because press activity was covered by citizens' freedom of expression.",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I40",
@@ -593,7 +853,11 @@
       "mentioned": "Civil Liberties",
       "summary": "Responded to H. V. Kamath's argument and explained why a general constitutional right to bear arms was not being provided",
       "theme": "Fundamental Rights",
-      "raw_theme": "Civil Liberties"
+      "raw_theme": "Civil Liberties",
+      "click_through": {
+        "summary": "Responded to H. V. Kamath's argument and explained why a general constitutional right to bear arms was not being provided",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I41",
@@ -604,7 +868,11 @@
       "mentioned": "Fundamental Rights",
       "summary": "Discussed the circumstances in which rights could be subject to restrictions",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Discussed the circumstances in which rights could be subject to restrictions",
+        "deep_link": "/debates?date=1948-12-02&volume=VII"
+      }
     },
     {
       "id": "I42",
@@ -615,7 +883,11 @@
       "mentioned": "Constitutional Remedies",
       "summary": "Defended the constitutional provision for remedies to enforce Fundamental Rights",
       "theme": "Fundamental Rights",
-      "raw_theme": "Constitutional Remedies"
+      "raw_theme": "Constitutional Remedies",
+      "click_through": {
+        "summary": "Defended the constitutional provision for remedies to enforce Fundamental Rights",
+        "deep_link": "/debates?date=1948-12-09&volume=VII"
+      }
     },
     {
       "id": "I43",
@@ -626,7 +898,11 @@
       "mentioned": "Judiciary",
       "summary": "Explained the relationship between existing legal remedies and the constitutional remedies being created.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Judiciary"
+      "raw_theme": "Judiciary",
+      "click_through": {
+        "summary": "Explained the relationship between existing legal remedies and the constitutional remedies being created.",
+        "deep_link": "/debates?date=1948-12-09&volume=VII"
+      }
     },
     {
       "id": "I44",
@@ -637,7 +913,11 @@
       "mentioned": "Fundamental Rights",
       "summary": "Explained why constitutional remedies were important for protecting rights against ordinary legislative action.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Explained why constitutional remedies were important for protecting rights against ordinary legislative action.",
+        "deep_link": "/debates?date=1948-12-09&volume=VII"
+      }
     },
     {
       "id": "I45",
@@ -648,7 +928,11 @@
       "mentioned": "Citizenship",
       "summary": "Responded to criticism that the proposed citizenship provisions made citizenship too easy to obtain",
       "theme": "Citizenship",
-      "raw_theme": "Citizenship"
+      "raw_theme": "Citizenship",
+      "click_through": {
+        "summary": "Responded to criticism that the proposed citizenship provisions made citizenship too easy to obtain",
+        "deep_link": "/debates?date=1949-08-12&volume=IX"
+      }
     },
     {
       "id": "I46",
@@ -659,7 +943,11 @@
       "mentioned": "Citizenship",
       "summary": "Explained the special treatment of persons entering Assam before and after 19 July 1948.",
       "theme": "Citizenship",
-      "raw_theme": "Citizenship"
+      "raw_theme": "Citizenship",
+      "click_through": {
+        "summary": "Explained the special treatment of persons entering Assam before and after 19 July 1948.",
+        "deep_link": "/debates?date=1949-08-12&volume=IX"
+      }
     },
     {
       "id": "I47",
@@ -670,7 +958,11 @@
       "mentioned": "Citizenship",
       "summary": "Explained the requirement of application, residence and registration for certain migrants entering Assam after the specified date.",
       "theme": "Citizenship",
-      "raw_theme": "Citizenship"
+      "raw_theme": "Citizenship",
+      "click_through": {
+        "summary": "Explained the requirement of application, residence and registration for certain migrants entering Assam after the specified date.",
+        "deep_link": "/debates?date=1949-08-12&volume=IX"
+      }
     },
     {
       "id": "I48",
@@ -681,7 +973,11 @@
       "mentioned": "Citizenship",
       "summary": "Proposed provisions concerning people who ceased to be Indian citizens or voluntarily acquired foreign citizenship.",
       "theme": "Citizenship",
-      "raw_theme": "Citizenship"
+      "raw_theme": "Citizenship",
+      "click_through": {
+        "summary": "Proposed provisions concerning people who ceased to be Indian citizens or voluntarily acquired foreign citizenship.",
+        "deep_link": "/debates?date=1949-05-19&volume=VIII"
+      }
     },
     {
       "id": "I49",
@@ -692,7 +988,11 @@
       "mentioned": "Citizenship",
       "summary": "Addressed constitutional consequences of allegiance or citizenship of a foreign state",
       "theme": "Citizenship",
-      "raw_theme": "Citizenship"
+      "raw_theme": "Citizenship",
+      "click_through": {
+        "summary": "Addressed constitutional consequences of allegiance or citizenship of a foreign state",
+        "deep_link": "/debates?date=1949-05-19&volume=VIII"
+      }
     },
     {
       "id": "I50",
@@ -703,7 +1003,11 @@
       "mentioned": "Parliament",
       "summary": "Explained the proposed nomination of persons with expertise in areas such as literature, science, arts and social service.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Parliament"
+      "raw_theme": "Parliament",
+      "click_through": {
+        "summary": "Explained the proposed nomination of persons with expertise in areas such as literature, science, arts and social service.",
+        "deep_link": "/debates?date=1949-05-23&volume=VIII"
+      }
     },
     {
       "id": "I51",
@@ -714,7 +1018,11 @@
       "mentioned": "Parliament",
       "summary": "Proposed withdrawal of a provision because an existing constitutional provision already served the same purpose.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Parliament"
+      "raw_theme": "Parliament",
+      "click_through": {
+        "summary": "Proposed withdrawal of a provision because an existing constitutional provision already served the same purpose.",
+        "deep_link": "/debates?date=1949-05-23&volume=VIII"
+      }
     },
     {
       "id": "I52",
@@ -725,7 +1033,11 @@
       "mentioned": "Legislature",
       "summary": "Explained the distinction between the Assembly functioning as the Constituent Assembly and as the legislature",
       "theme": "Constitution/Governance",
-      "raw_theme": "Legislature"
+      "raw_theme": "Legislature",
+      "click_through": {
+        "summary": "Explained the distinction between the Assembly functioning as the Constituent Assembly and as the legislature",
+        "deep_link": "/debates?date=1949-06-10&volume=VIII"
+      }
     },
     {
       "id": "I53",
@@ -736,7 +1048,11 @@
       "mentioned": "Constitutional Terminology",
       "summary": "Defended retaining terminology consistent with the Indian Independence Act",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Terminology"
+      "raw_theme": "Constitutional Terminology",
+      "click_through": {
+        "summary": "Defended retaining terminology consistent with the Indian Independence Act",
+        "deep_link": "/debates?date=1949-06-10&volume=VIII"
+      }
     },
     {
       "id": "I54",
@@ -747,7 +1063,11 @@
       "mentioned": "Legislature",
       "summary": "Participated in discussion of provisions governing the legislature and constitutional procedure.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Legislature"
+      "raw_theme": "Legislature",
+      "click_through": {
+        "summary": "Participated in discussion of provisions governing the legislature and constitutional procedure.",
+        "deep_link": "/debates?date=1949-08-08&volume=IX"
+      }
     },
     {
       "id": "I55",
@@ -758,7 +1078,11 @@
       "mentioned": "Constitutional Morality",
       "summary": "Explained that the effectiveness of a Constitution depends significantly on how it is actually worked",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Morality"
+      "raw_theme": "Constitutional Morality",
+      "click_through": {
+        "summary": "Explained that the effectiveness of a Constitution depends significantly on how it is actually worked",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I56",
@@ -769,7 +1093,11 @@
       "mentioned": "Democracy",
       "summary": "Discussed the relationship between constitutional government and democratic functioning",
       "theme": "Constitution/Governance",
-      "raw_theme": "Democracy"
+      "raw_theme": "Democracy",
+      "click_through": {
+        "summary": "Discussed the relationship between constitutional government and democratic functioning",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I57",
@@ -780,7 +1108,11 @@
       "mentioned": "Social Democracy",
       "summary": "Connected political democracy with the principles of liberty, equality and fraternity.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Social Democracy"
+      "raw_theme": "Social Democracy",
+      "click_through": {
+        "summary": "Connected political democracy with the principles of liberty, equality and fraternity.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I58",
@@ -791,7 +1123,11 @@
       "mentioned": "Fundamental Rights",
       "summary": "Discussed the argument that Fundamental Rights should be absolute and the constitutional approach to limitations.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Discussed the argument that Fundamental Rights should be absolute and the constitutional approach to limitations.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I59",
@@ -802,7 +1138,11 @@
       "mentioned": "Property",
       "summary": "Responded to arguments concerning nationalisation, socialisation of private property and compensation.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Property"
+      "raw_theme": "Property",
+      "click_through": {
+        "summary": "Responded to arguments concerning nationalisation, socialisation of private property and compensation.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I60",
@@ -813,7 +1153,11 @@
       "mentioned": "Federalism",
       "summary": "Explained the rationale for overriding Union powers in emergencies and the interests of the country as a whole.",
       "theme": "Federalism",
-      "raw_theme": "Federalism"
+      "raw_theme": "Federalism",
+      "click_through": {
+        "summary": "Explained the rationale for overriding Union powers in emergencies and the interests of the country as a whole.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I61",
@@ -824,7 +1168,11 @@
       "mentioned": "Political Parties",
       "summary": "Reflected on the role of party discipline and independent/rebellious members during constitution-making.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Political Parties"
+      "raw_theme": "Political Parties",
+      "click_through": {
+        "summary": "Reflected on the role of party discipline and independent/rebellious members during constitution-making.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I62",
@@ -835,7 +1183,11 @@
       "mentioned": "Constitution-making",
       "summary": "Acknowledged the contribution of members whose criticisms challenged the Drafting Committee.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution-making"
+      "raw_theme": "Constitution-making",
+      "click_through": {
+        "summary": "Acknowledged the contribution of members whose criticisms challenged the Drafting Committee.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I63",
@@ -846,7 +1198,11 @@
       "mentioned": "Constitutional Amendment",
       "summary": "Distinguished the amendment powers of the future Parliament from those of the Constituent Assembly.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Amendment"
+      "raw_theme": "Constitutional Amendment",
+      "click_through": {
+        "summary": "Distinguished the amendment powers of the future Parliament from those of the Constituent Assembly.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I64",
@@ -857,7 +1213,11 @@
       "mentioned": "Constitution",
       "summary": "Discussed the difficulty of constitution-makers binding future generations through constitutional provisions.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution"
+      "raw_theme": "Constitution",
+      "click_through": {
+        "summary": "Discussed the difficulty of constitution-makers binding future generations through constitutional provisions.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I65",
@@ -868,7 +1228,11 @@
       "mentioned": "National Unity",
       "summary": "Explained why certain overriding Union powers were considered necessary for national interests.",
       "theme": "Federalism",
-      "raw_theme": "National Unity"
+      "raw_theme": "National Unity",
+      "click_through": {
+        "summary": "Explained why certain overriding Union powers were considered necessary for national interests.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I66",
@@ -879,7 +1243,11 @@
       "mentioned": "Constitutional Government",
       "summary": "Emphasised the importance of the people and institutions responsible for operating the Constitution.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitutional Government"
+      "raw_theme": "Constitutional Government",
+      "click_through": {
+        "summary": "Emphasised the importance of the people and institutions responsible for operating the Constitution.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I67",
@@ -890,7 +1258,11 @@
       "mentioned": "Independence",
       "summary": "Reflected on whether India would maintain its independence after becoming a Republic.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Independence"
+      "raw_theme": "Independence",
+      "click_through": {
+        "summary": "Reflected on whether India would maintain its independence after becoming a Republic.",
+        "deep_link": "/debates?date=1949-11-25&volume=XI"
+      }
     },
     {
       "id": "I68",
@@ -901,7 +1273,11 @@
       "mentioned": "Constitution",
       "summary": "Moved the motion that the Constitution as settled by the Assembly be passed.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution"
+      "raw_theme": "Constitution",
+      "click_through": {
+        "summary": "Moved the motion that the Constitution as settled by the Assembly be passed.",
+        "deep_link": "/debates?date=1949-11-17&volume=XI"
+      }
     },
     {
       "id": "I69",
@@ -912,7 +1288,11 @@
       "mentioned": "Constitution-making",
       "summary": "Participated in the final-stage discussion of the Constitution before adoption.",
       "theme": "Constitution/Governance",
-      "raw_theme": "Constitution-making"
+      "raw_theme": "Constitution-making",
+      "click_through": {
+        "summary": "Participated in the final-stage discussion of the Constitution before adoption.",
+        "deep_link": "/debates?date=1949-11-17&volume=XI"
+      }
     },
     {
       "id": "I70",
@@ -923,7 +1303,11 @@
       "mentioned": "Equality",
       "summary": "The debate included discussion of equal opportunities for different classes and sections of Indian society.",
       "theme": "Caste/Equality",
-      "raw_theme": "Equality"
+      "raw_theme": "Equality",
+      "click_through": {
+        "summary": "The debate included discussion of equal opportunities for different classes and sections of Indian society.",
+        "deep_link": "/debates?date=1949-11-17&volume=XI"
+      }
     },
     {
       "id": "I71",
@@ -934,18 +1318,26 @@
       "mentioned": "Scheduled Areas",
       "summary": "Proposed reducing the maximum membership of District/Regional Councils from forty to twenty-four.",
       "theme": "Tribal Rights",
-      "raw_theme": "Scheduled Areas"
+      "raw_theme": "Scheduled Areas",
+      "click_through": {
+        "summary": "Proposed reducing the maximum membership of District/Regional Councils from forty to twenty-four.",
+        "deep_link": "/debates?date=1949-09-06&volume=IX"
+      }
     },
     {
       "id": "I72",
-      "label": "Constituencies",
+      "label": "Delimitation of Tribal Constituencies",
       "type": "intervention",
       "date": "1949-09-06",
       "volume": "IX",
       "mentioned": "Tribal Administration",
       "summary": "Proposed leaving delimitation of constituencies to rules rather than fixing the details directly in the Constitution.",
       "theme": "Tribal Rights",
-      "raw_theme": "Tribal Administration"
+      "raw_theme": "Tribal Administration",
+      "click_through": {
+        "summary": "Proposed leaving delimitation of constituencies to rules rather than fixing the details directly in the Constitution.",
+        "deep_link": "/debates?date=1949-09-06&volume=IX"
+      }
     },
     {
       "id": "I73",
@@ -956,7 +1348,11 @@
       "mentioned": "Tribal Administration",
       "summary": "Proposed adding the term of office of members of the relevant councils to the Sixth Schedule",
       "theme": "Tribal Rights",
-      "raw_theme": "Tribal Administration"
+      "raw_theme": "Tribal Administration",
+      "click_through": {
+        "summary": "Proposed adding the term of office of members of the relevant councils to the Sixth Schedule",
+        "deep_link": "/debates?date=1949-09-06&volume=IX"
+      }
     },
     {
       "id": "I74",
@@ -965,20 +1361,28 @@
       "date": "1949-09-15",
       "volume": "IX",
       "mentioned": "Fundamental Rights",
-      "summary": "Revisited the earlier debate over \u201cdue process\u201d versus \u201cprocedure established by law.\u201d",
+      "summary": "Revisited the earlier debate over “due process” versus “procedure established by law.”",
       "theme": "Fundamental Rights",
-      "raw_theme": "Fundamental Rights"
+      "raw_theme": "Fundamental Rights",
+      "click_through": {
+        "summary": "Revisited the earlier debate over “due process” versus “procedure established by law.”",
+        "deep_link": "/debates?date=1949-09-15&volume=IX"
+      }
     },
     {
       "id": "I75",
-      "label": "Arrest",
+      "label": "Article 15 and Powers of Arrest",
       "type": "intervention",
       "date": "1949-09-15",
       "volume": "IX",
       "mentioned": "Personal Liberty",
       "summary": "Explained concerns that Article 15, without additional safeguards, could permit Parliament broad power concerning arrest",
       "theme": "Fundamental Rights",
-      "raw_theme": "Personal Liberty"
+      "raw_theme": "Personal Liberty",
+      "click_through": {
+        "summary": "Explained concerns that Article 15, without additional safeguards, could permit Parliament broad power concerning arrest",
+        "deep_link": "/debates?date=1949-09-15&volume=IX"
+      }
     },
     {
       "id": "I76",
@@ -989,12 +1393,20 @@
       "mentioned": "Personal Liberty",
       "summary": "Explained the proposed Article 15A as providing safeguards associated with due process.",
       "theme": "Fundamental Rights",
-      "raw_theme": "Personal Liberty"
+      "raw_theme": "Personal Liberty",
+      "click_through": {
+        "summary": "Explained the proposed Article 15A as providing safeguards associated with due process.",
+        "deep_link": "/debates?date=1949-09-15&volume=IX"
+      }
     },
     {
       "id": "T10",
       "label": "Linguistic States / State Reorganization",
-      "type": "theme"
+      "type": "theme",
+      "click_through": {
+        "summary": "Theme: Linguistic States / State Reorganization",
+        "deep_link": "/debates?theme=Linguistic%20States%20/%20State%20Reorganization"
+      }
     },
     {
       "id": "W03",
@@ -1004,7 +1416,11 @@
       "pages": "355-380",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "Address to the All India Scheduled Castes Federation (1945) proposing a scheme for representation of Hindus, Muslims, Scheduled Castes and other minorities in the legislature, executive and services of a future Indian constitution, critiquing both the Cripps and Sapru Constituent Assembly proposals and rejecting simple majority rule as unsuited to a country with a permanent communal majority.",
-      "theme": "Minorities"
+      "theme": "Minorities",
+      "click_through": {
+        "summary": "Address to the All India Scheduled Castes Federation (1945) proposing a scheme for representation of Hindus, Muslims, Scheduled Castes and other minorities in the legislature, executive and services of a future Indian constitution, critiquing both the Cripps and Sapru Constituent Assembly proposals and rejecting simple majority rule as unsuited to a country with a permanent communal majority.",
+        "deep_link": "/ask?q=Summarize%20Communal%20Deadlock%20and%20a%20Way%20to%20Solve%20It%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "W04",
@@ -1014,7 +1430,11 @@
       "pages": "279-354",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "Kale Memorial Lecture (1939) analyzing the federal scheme of the Government of India Act, 1935, arguing it is not a genuine federation, gives the Indian Princely States disproportionate power over British India, blocks India's path to Dominion Status, and should be rejected in favour of a Federation of British India alone.",
-      "theme": "Federalism"
+      "theme": "Federalism",
+      "click_through": {
+        "summary": "Kale Memorial Lecture (1939) analyzing the federal scheme of the Government of India Act, 1935, arguing it is not a genuine federation, gives the Indian Princely States disproportionate power over British India, blocks India's path to Dominion Status, and should be rejected in favour of a Federation of British India alone.",
+        "deep_link": "/ask?q=Summarize%20Federation%20versus%20Freedom%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "W05",
@@ -1024,7 +1444,11 @@
       "pages": "129-136",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "1953 Times of India article on the creation of linguistic States (prompted by the Andhra agitation), setting out three conditions for forming a linguistic State: viability, awareness of the internal caste/communal composition of the proposed State, and caution against consolidating all speakers of one language into a single unit.",
-      "theme": "Linguistic States / State Reorganization"
+      "theme": "Linguistic States / State Reorganization",
+      "click_through": {
+        "summary": "1953 Times of India article on the creation of linguistic States (prompted by the Andhra agitation), setting out three conditions for forming a linguistic State: viability, awareness of the internal caste/communal composition of the proposed State, and caution against consolidating all speakers of one language into a single unit.",
+        "deep_link": "/ask?q=Summarize%20Need%20for%20Checks%20and%20Balances%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "W06",
@@ -1034,7 +1458,11 @@
       "pages": "381-452",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "1947 memorandum submitted to the Constituent Assembly on behalf of the All India Scheduled Castes Federation, drafted as proposed constitutional articles covering admission of Indian States into the Union, Fundamental Rights of citizens, protections for minorities generally, and specific safeguards (representation, education, settlement) for the Scheduled Castes, including a critique of the Poona Pact's joint-electorate mechanism.",
-      "theme": "Minorities"
+      "theme": "Minorities",
+      "click_through": {
+        "summary": "1947 memorandum submitted to the Constituent Assembly on behalf of the All India Scheduled Castes Federation, drafted as proposed constitutional articles covering admission of Indian States into the Union, Fundamental Rights of citizens, protections for minorities generally, and specific safeguards (representation, education, settlement) for the Scheduled Castes, including a critique of the Poona Pact's joint-electorate mechanism.",
+        "deep_link": "/ask?q=Summarize%20States%20and%20Minorities%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "W07",
@@ -1044,13 +1472,21 @@
       "pages": "137-204",
       "source": "Collected Works of Babasaheb Ambedkar, Vol. 1",
       "summary": "1955 response to the States Reorganisation Commission report, arguing its recommendations consolidate the Hindi-speaking North while balkanizing the South, proposing division of Uttar Pradesh, Bihar, Madhya Pradesh and Maharashtra into smaller units, a separate Bombay City State, cumulative voting to protect minorities within linguistic States, and a second (southern) national capital at Hyderabad.",
-      "theme": "Linguistic States / State Reorganization"
+      "theme": "Linguistic States / State Reorganization",
+      "click_through": {
+        "summary": "1955 response to the States Reorganisation Commission report, arguing its recommendations consolidate the Hindi-speaking North while balkanizing the South, proposing division of Uttar Pradesh, Bihar, Madhya Pradesh and Maharashtra into smaller units, a separate Bombay City State, cumulative voting to protect minorities within linguistic States, and a second (southern) national capital at Hyderabad.",
+        "deep_link": "/ask?q=Summarize%20Thoughts%20on%20Linguistic%20States%20from%20Collected%20Works%20Vol%201"
+      }
     },
     {
       "id": "P13",
       "label": "Mahatma Gandhi",
       "type": "person",
-      "description": "Congress leader; subject of Ambedkar's direct criticism in multiple writings (Round Table Conference conduct, the Poona Pact, and the 1920 Congress linguistic-provinces scheme)."
+      "description": "Congress leader; subject of Ambedkar's direct criticism in multiple writings (Round Table Conference conduct, the Poona Pact, and the 1920 Congress linguistic-provinces scheme).",
+      "click_through": {
+        "summary": "Congress leader; subject of Ambedkar's direct criticism in multiple writings (Round Table Conference conduct, the Poona Pact, and the 1920 Congress linguistic-provinces scheme).",
+        "deep_link": "/ask?q=What%20did%20Mahatma%20Gandhi%20say%20about%20the%20Constituent%20Assembly%20debates%3F"
+      }
     }
   ],
   "edges": [
@@ -2006,7 +2442,7 @@
       "source": "I72",
       "target": "T05",
       "relationship": "relates to theme",
-      "justification": "Intervention 'Constituencies' is categorized under Tribal Rights."
+      "justification": "Intervention 'Delimitation of Tribal Constituencies' is categorized under Tribal Rights."
     },
     {
       "source": "P01",
@@ -2024,7 +2460,7 @@
       "source": "P01",
       "target": "I74",
       "relationship": "intervened in",
-      "justification": "Revisited the earlier debate over \u201cdue process\u201d versus \u201cprocedure established by law.\u201d"
+      "justification": "Revisited the earlier debate over “due process” versus “procedure established by law.”"
     },
     {
       "source": "I74",
@@ -2042,7 +2478,7 @@
       "source": "I75",
       "target": "T03",
       "relationship": "relates to theme",
-      "justification": "Intervention 'Arrest' is categorized under Fundamental Rights."
+      "justification": "Intervention 'Article 15 and Powers of Arrest' is categorized under Fundamental Rights."
     },
     {
       "source": "P01",
