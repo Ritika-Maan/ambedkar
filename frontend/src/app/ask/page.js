@@ -157,7 +157,10 @@ function Segmented({ label, options, value, onChange }) {
 }
 
 function isDebate(s) {
-  return String(s.type || "").toLowerCase().startsWith("debate");
+  const t = String(s.type || "").toLowerCase();
+  // Backend sends record_type "summary" for every CAD intervention record;
+  // writings come through as "source_text".
+  return t === "summary" || t.startsWith("debate");
 }
 
 function sourceMeta(s) {
