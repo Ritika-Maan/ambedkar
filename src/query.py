@@ -1,4 +1,3 @@
-
 import os
 import sys
 from openai import OpenAI
@@ -181,6 +180,9 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
                 "type": c["metadata"].get("record_type", "source_text"),
                 "relevance": "high" if c["distance"] < 0.8 else "medium" if c["distance"] < 1.2 else "low",
                 "section": c["metadata"].get("chunk_index"),
+                # Real retrieved chunk text, truncated the same way
+                # /debates-search already truncates its snippets.
+                "snippet": (c["text"][:300] + "...") if len(c["text"]) > 300 else c["text"],
             }
             for c in chunks
         ],

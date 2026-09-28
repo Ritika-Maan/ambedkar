@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 const API_BASE = "http://localhost:8000";
 
-export default function AskPage() {
+function AskPageInner() {
   const [question, setQuestion] = useState("");
   const [mode, setMode] = useState("student");
   const [lang, setLang] = useState("en");
@@ -22,7 +22,9 @@ export default function AskPage() {
   const [micError, setMicError] = useState(null);
   const recognitionRef = useRef(null);
   useEffect(() => {
+    // Syncs local form state from the ?q= deep link (graph -> ask integration).
     const q = searchParams.get("q");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (q) setQuestion(q);
 }, [searchParams]);
   useEffect(() => {
@@ -252,7 +254,7 @@ function toggleMic() {
           <h4>Sources</h4>
           <ul>
             {result.sources.map((s, i) => (
-              <li key={i} style={{ marginBottom: "0.5rem" }}>
+              <li key={i} style={{ marginBottom: "0.75rem" }}>
                 <strong>{s.title}</strong>
                 {s.date ? ` — ${s.date}` : ""}
                 {s.volume ? ` — Vol. ${s.volume}` : ""}
@@ -261,11 +263,39 @@ function toggleMic() {
                 <span style={{ fontSize: "0.85em", color: "#666" }}>
                   ({s.type}, relevance: {s.relevance})
                 </span>
+                {/* Real retrieved source text, only when the backend sends it.
+                    Omits silently if `snippet` isn't present -- never fabricated. */}
+                {s.snippet && (
+                  <blockquote
+                    style={{
+                      margin: "0.4rem 0 0",
+                      padding: "0.5rem 0.75rem",
+                      borderLeft: "3px solid #ccc",
+                      color: "#333",
+                      fontSize: "0.9em",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {s.snippet}
+                  </blockquote>
+                )}
               </li>
             ))}
           </ul>
         </div>
       )}
     </div>
+  );
+}
+
+// useSearchParams() requires a Suspense boundary in the App Router or the
+// production build fails during prerendering (confirmed via `npm run build`
+// against this exact commit). This wrapper is the only fix -- nothing
+// above this line was changed.
+export default function AskPage() {
+  return (
+    <Suspense fallback={<div style={{ maxWidth: 700, margin: "0 auto" }}>Loading…</div>}>
+      <AskPageInner />
+    </Suspense>
   );
 }

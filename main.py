@@ -13,14 +13,18 @@ from src.query import ask  # reuses the exact same ask() tested in the console
 
 app = FastAPI(title="Ask Ambedkar API", version="0.1.0")
 
-# Wide open for now — tighten to Priya's actual frontend origin before demo/deploy.
+# Only the frontend origins we actually use. If the kiosk tablet opens the app
+# via the laptop's IP, add "http://<laptop-ip>:3000" to this list.
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 class AskRequest(BaseModel):
     question: str = Field(..., min_length=1, description="User's question")
@@ -38,6 +42,7 @@ class Source(BaseModel):
     type: Optional[str] = None
     relevance: Optional[str] = None
     section: Optional[int] = None
+    snippet: Optional[str] = None
 
 
 class AskResponse(BaseModel):
