@@ -139,6 +139,12 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
     if lang not in LANG_PROMPTS:
         lang = "en"
 
+    # drop malformed history entries (missing role/content) so they can't break the LLM call
+    history = [
+        h for h in (history or [])
+        if h.get("role") in ("user", "assistant") and isinstance(h.get("content"), str)
+    ]
+
     retrieval_query = question
     if history:
         last_user_msgs = [h["content"] for h in history if h.get("role") == "user"]
@@ -154,10 +160,10 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
     )
 
     messages = [{"role": "system", "content": system_prompt}]
-    if history:
-        messages.extend(history)
+    messages.extend(history)
     messages.append({"role": "user", "content": question})
 
+    failed = False
     try:
         response = client.chat.completions.create(
             model=GROQ_MODEL,
@@ -167,12 +173,14 @@ def ask(question: str, mode: str = "student", n_results: int = 5, corpus: str = 
         answer = response.choices[0].message.content
     except Exception as e:
         print(f"[ask] Groq call failed: {e}")
+        failed = True
         answer = GEN_UNAVAILABLE[lang] if chunks else NOT_IN_ARCHIVE_AND_UNAVAILABLE[lang]
 
     return {
         "answer": answer,
         "mode": mode,
         "lang": lang,
+        "degraded": failed,
         "sources": [
             {
                 "date": c["metadata"].get("date"),

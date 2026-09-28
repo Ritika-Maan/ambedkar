@@ -77,7 +77,8 @@ def ask_endpoint(req: AskRequest):
         print(f"[/ask] error: {e}")
         raise HTTPException(status_code=500, detail="Something went wrong generating the answer.")
     result["cached"] = False
-    _cache[key] = result
+    if not result.get("degraded"):
+        _cache[key] = result
     return result
 
 @app.get("/timeline")
