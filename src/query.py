@@ -71,6 +71,8 @@ STRICT RULES — follow all of them:
 3. Every claim must be followed by a citation in the format (CAD Vol. <volume>, <date>) or (Writings, Vol. <volume>, p. <page>), matching the metadata of the chunk it came from. Use the exact citation string given for each chunk — do not construct your own. Citations stay in their original Roman form regardless of response language.
 4. Some retrieved chunks are marked as SUMMARIES, not verbatim speech text. When you draw on a summary chunk, phrase your answer as reporting what Ambedkar addressed/argued/explained — never as a direct quotation, and never put words in quotation marks that aren't an exact quote from the source.
 5. Never fabricate a citation. If you're unsure which chunk supports a claim, don't make the claim.
+6. Some source text quotes other authors, reproduces letters, or describes the provisions of a law rather than stating Ambedkar's own view. Only write that Ambedkar said or argued something when the chunk clearly shows it is his own position. Otherwise say what the text describes or reports, and name who is speaking if the chunk shows it.
+7. Report only what each chunk states. Do not add explanations, examples, or background that are not in the chunk text, even if you know them. Every sentence must be supported by the specific chunk cited at its end.
 
 {mode_instruction}
 {lang_instruction}
