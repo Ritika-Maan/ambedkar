@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 const API_BASE = "http://localhost:8000";
@@ -17,6 +17,10 @@ export default function AskPage() {
   const [slow, setSlow] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [voiceMissing, setVoiceMissing] = useState(false);
+  const [listening, setListening] = useState(false);
+  const [micSupported, setMicSupported] = useState(false);
+  const [micError, setMicError] = useState(null);
+  const recognitionRef = useRef(null);
   useEffect(() => {
     const q = searchParams.get("q");
     if (q) setQuestion(q);
@@ -28,6 +32,10 @@ export default function AskPage() {
     window.speechSynthesis.addEventListener("voiceschanged", warm);
     return () => window.speechSynthesis.removeEventListener("voiceschanged", warm);
   }, []);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    setMicSupported(!!(window.SpeechRecognition || window.webkitSpeechRecognition));
+  }, []);
 
 async function handleAsk(e) {
   e.preventDefault();
@@ -38,6 +46,7 @@ async function handleAsk(e) {
   if (typeof window !== "undefined") window.speechSynthesis?.cancel();
   setSpeaking(false);
   setVoiceMissing(false);
+  recognitionRef.current?.stop();
 
 
   const controller = new AbortController();
@@ -73,9 +82,11 @@ async function handleAsk(e) {
   }
 }
 function resetConversation() {
+  recognitionRef.current?.stop();
   if (typeof window !== "undefined") window.speechSynthesis?.cancel();
   setSpeaking(false);
   setVoiceMissing(false);
+  setMicError(null);
   setHistory([]);
   setResult(null);
   setError(null);
@@ -115,6 +126,48 @@ function speakAnswer() {
 
   setSpeaking(true);
   synth.speak(utter);
+}
+function toggleMic() {
+  if (typeof window === "undefined") return;
+  if (listening) {
+    recognitionRef.current?.stop();
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) return;
+
+  window.speechSynthesis?.cancel();
+  setSpeaking(false);
+  setMicError(null);
+
+  const langMap = { en: "en-IN", hi: "hi-IN", mr: "mr-IN", ta: "ta-IN" };
+  const rec = new SR();
+  rec.lang = langMap[lang] || "en-IN";
+  rec.interimResults = true;
+  rec.continuous = false;
+
+  rec.onresult = (event) => {
+    let transcript = "";
+    for (let i = 0; i < event.results.length; i++) {
+      transcript += event.results[i][0].transcript;
+    }
+    setQuestion(transcript);
+  };
+  rec.onerror = (event) => {
+    if (event.error === "not-allowed") {
+      setMicError("Microphone access is blocked. Allow it in the browser's address bar and try again.");
+    } else if (event.error === "no-speech") {
+      setMicError("Didn't catch anything. Try again.");
+    } else {
+      setMicError(`Voice input failed (${event.error}).`);
+    }
+    setListening(false);
+  };
+  rec.onend = () => setListening(false);
+
+  recognitionRef.current = rec;
+  setListening(true);
+  rec.start();
 }
 
   return (
@@ -159,7 +212,12 @@ function speakAnswer() {
             </select>
           </label>
         </div>
-
+        {micSupported && (
+          <button type="button" onClick={toggleMic} style={{ padding: "0.6rem" }}>
+            {listening ? "Stop listening..." : "🎤 Speak your question"}
+          </button>
+        )}
+        {micError && <p style={{ color: "#b00020", fontSize: "0.9em" }}>{micError}</p>}
         <button type="submit" disabled={loading} style={{ padding: "0.6rem", fontWeight: 600 }}>
           {loading ? (slow ? "Still thinking... (archive is slow right now)" : "Thinking...") : "Ask"}
         </button>
