@@ -19,8 +19,10 @@ export default function DebatesPage() {
   const router = useRouter();
   const [slow, setSlow] = useState(false);
 
-const handleSearch = useCallback(async (e) => {
-  if (e) e.preventDefault();
+// Takes explicit filter values so Reset can search with cleared filters
+// immediately (state updates are async, so reading state here would be stale).
+const runSearch = useCallback(async (filters) => {
+  const { date, volume, topic, article } = filters;
   setLoading(true);
   setError(null);
   setSlow(false);
@@ -76,14 +78,18 @@ const handleSearch = useCallback(async (e) => {
     setSlow(false);
     setLoading(false);
   }
-}, [date, volume, topic, article]);
+}, []);
+
+  function handleSearch(e) {
+    if (e) e.preventDefault();
+    runSearch({ date, volume, topic, article });
+  }
 
   // Load everything once on mount so the Explorer isn't blank on arrival.
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
-    handleSearch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    runSearch({ date: "", volume: "", topic: "", article: "" });
+  }, [runSearch]);
 
   function handleReset() {
     setDate("");
@@ -91,7 +97,7 @@ const handleSearch = useCallback(async (e) => {
     setTopic("");
     setArticle("");
     setError(null);
-    setTimeout(() => handleSearch(), 0);
+    runSearch({ date: "", volume: "", topic: "", article: "" });
   }
 
   function askAboutThis(title, date) {
