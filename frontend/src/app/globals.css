@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 :root {
   --background: #ffffff;
@@ -17,4 +18,5 @@ body {
   --font-mono: var(--font-geist-mono);
 }
 
-
+nav { flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 0.75rem; }

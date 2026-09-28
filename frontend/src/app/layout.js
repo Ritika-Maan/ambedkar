@@ -1,4 +1,5 @@
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata = {
   title: "Ask Ambedkar",
@@ -10,10 +11,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
         <nav style={{ display: "flex", gap: "1.5rem", padding: "1rem 2rem", borderBottom: "1px solid #ddd" }}>
-          <a href="/ask" style={{ fontWeight: 600 }}>Ask</a>
-          <a href="/debates">Debates Explorer</a>
-          <a href="/graph">Knowledge Graph</a>
-          <a href="/kiosk-settings">Kiosk Settings</a>
+          <Link href="/ask" style={{ fontWeight: 600 }}>Ask</Link>
+          <Link href="/debates">Debates Explorer</Link>
+          <Link href="/graph">Knowledge Graph</Link>
+          <Link href="/kiosk-settings">Kiosk Settings</Link>
         </nav>
         <main style={{ padding: "2rem" }}>{children}</main>
       </body>

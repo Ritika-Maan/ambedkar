@@ -4,6 +4,7 @@
    saved display prefs, ?q= deep link) after mount. That is intentional. */
 import { Suspense, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const API_BASE = "http://localhost:8000";
 const HISTORY_LIMIT = 12; // last 6 exchanges go to the backend (protects Groq limits)
@@ -195,6 +196,7 @@ function SourcePanel({ s, onClose }) {
 
 function AskPageInner() {
   const searchParams = useSearchParams();
+  const fromNode = searchParams.get("from");
 
   const [question, setQuestion] = useState("");
   const [prefilled, setPrefilled] = useState(false);
@@ -468,6 +470,15 @@ function AskPageInner() {
           <button type="button" className="ask-btn ghost small" aria-pressed={large} onClick={() => setPref("ask.large", !large, setLarge)}>
             Large text
           </button>
+          {fromNode && (
+            <Link
+              href={`/graph?node=${encodeURIComponent(fromNode)}`}
+              className="ask-btn ghost small"
+              style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}
+            >
+              ← Back to graph
+            </Link>
+          )}
           <button type="button" className="ask-btn ghost small" onClick={resetConversation}>New conversation</button>
         </div>
       </div>

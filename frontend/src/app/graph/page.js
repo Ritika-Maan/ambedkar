@@ -25,7 +25,14 @@ export default function GraphPage() {
       .then((res) => res.json())
       .then(setGraphData)
       .catch(() => setError("Could not load graph data. Is the backend running?"));
-  }, []);
+    }, []);
+    
+  useEffect(() => {
+    if (!graphData) return;
+    const id = new URLSearchParams(window.location.search).get("node");
+    const found = id && graphData.nodes.find((n) => n.id === id);
+    if (found) setSelected(found);
+  }, [graphData]);
 
   useEffect(() => {
     if (!graphData || !graphData.nodes || graphData.nodes.length === 0) return;
@@ -67,7 +74,9 @@ export default function GraphPage() {
       .selectAll("circle")
       .data(nodes)
       .join("circle")
-      .attr("r", (d) => (d.type === "person" ? 10 : 6))
+      .attr("r", (d) => (d.type === "person" ? 14 : 9))
+      .attr("stroke", "transparent")
+      .attr("stroke-width", 16)
       .attr("fill", (d) => TYPE_COLORS[d.type] || "#999")
       .style("cursor", "pointer")
       .call(
@@ -96,7 +105,7 @@ export default function GraphPage() {
       .data(nodes)
       .join("text")
       .text((d) => d.label)
-      .attr("font-size", 9)
+      .attr("font-size", 12)
       .attr("dx", 10)
       .attr("dy", 3)
       .style("pointer-events", "none");
@@ -116,7 +125,7 @@ export default function GraphPage() {
 
   function askAboutNode() {
     if (!selected) return;
-    router.push(`/ask?q=${encodeURIComponent(`Tell me about ${selected.label}`)}`);
+    router.push(`/ask?q=${encodeURIComponent(`Tell me about ${selected.label}`)}&from=${encodeURIComponent(selected.id)}`);
   }
 
   if (error) return <p style={{ color: "#b00020" }}>{error}</p>;
@@ -128,18 +137,17 @@ export default function GraphPage() {
         Drag nodes to explore. Click a node to see details. {graphData ? `${graphData.nodes.length} nodes, ${graphData.edges.length} connections.` : "Loading..."}
       </p>
 
-      <div style={{ display: "flex", gap: "1.5rem" }}>
-        <svg ref={svgRef} width={900} height={650} style={{ border: "1px solid #ddd" }} />
-
+      <div style={{ display: "flex", gap: "1.5rem",flexWrap: "wrap" }}>
+        <svg ref={svgRef} viewBox="0 0 900 650" style={{ width: "100%", maxHeight: "75vh", border: "1px solid #ddd", touchAction: "none", flex: "1 1 500px" }}/>
         {selected && (
-          <div style={{ width: 260, padding: "1rem", border: "1px solid #ddd" }}>
+          <div style={{ flex: "1 1 260px", padding: "1rem", border: "1px solid #ddd" }}>
             <h3>{selected.label}</h3>
             <p style={{ fontSize: "0.8em", color: "#666", textTransform: "capitalize" }}>{selected.type}</p>
             {selected.description && <p>{selected.description}</p>}
             {selected.summary && <p>{selected.summary}</p>}
             {selected.date && <p><strong>Date:</strong> {selected.date}</p>}
             {selected.volume && <p><strong>Volume:</strong> {selected.volume}</p>}
-            <button onClick={askAboutNode} style={{ marginTop: "0.5rem" }}>
+            <button onClick={askAboutNode} style={{ marginTop: "0.5rem", minHeight: 56, padding: "0 1rem", fontSize: "1rem" }}>
               Ask Ambedkar about this →
             </button>
           </div>
