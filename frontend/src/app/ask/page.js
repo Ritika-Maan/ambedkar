@@ -15,10 +15,19 @@ export default function AskPage() {
   const [result, setResult] = useState(null);
   const searchParams = useSearchParams();
   const [slow, setSlow] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  const [voiceMissing, setVoiceMissing] = useState(false);
   useEffect(() => {
     const q = searchParams.get("q");
     if (q) setQuestion(q);
 }, [searchParams]);
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.speechSynthesis) return;
+    const warm = () => window.speechSynthesis.getVoices();
+    warm();
+    window.speechSynthesis.addEventListener("voiceschanged", warm);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", warm);
+  }, []);
 
 async function handleAsk(e) {
   e.preventDefault();
@@ -26,6 +35,10 @@ async function handleAsk(e) {
   setLoading(true);
   setError(null);
   setSlow(false);
+  if (typeof window !== "undefined") window.speechSynthesis?.cancel();
+  setSpeaking(false);
+  setVoiceMissing(false);
+
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 15000); // hard timeout
@@ -60,10 +73,48 @@ async function handleAsk(e) {
   }
 }
 function resetConversation() {
+  if (typeof window !== "undefined") window.speechSynthesis?.cancel();
+  setSpeaking(false);
+  setVoiceMissing(false);
   setHistory([]);
   setResult(null);
   setError(null);
   setQuestion("");
+}
+
+function speakAnswer() {
+  if (!result?.answer || typeof window === "undefined" || !window.speechSynthesis) return;
+  const synth = window.speechSynthesis;
+
+  if (synth.speaking) {
+    synth.cancel();
+    setSpeaking(false);
+    return;
+  }
+
+  // don't read citations aloud
+  const clean = result.answer
+    .replace(/\((CAD|Writings)[^)]*\)/g, "")
+    .replace(/[*#_`]/g, "")
+    .trim();
+
+  const langMap = { en: "en-IN", hi: "hi-IN", mr: "mr-IN", ta: "ta-IN" };
+  const target = langMap[result.lang] || "en-IN";
+  const voices = synth.getVoices();
+  const match =
+    voices.find((v) => v.lang === target) ||
+    voices.find((v) => v.lang.startsWith(target.split("-")[0]));
+
+  setVoiceMissing(result.lang !== "en" && !match);
+
+  const utter = new SpeechSynthesisUtterance(clean);
+  utter.lang = target;
+  if (match) utter.voice = match;
+  utter.onend = () => setSpeaking(false);
+  utter.onerror = () => setSpeaking(false);
+
+  setSpeaking(true);
+  synth.speak(utter);
 }
 
   return (
@@ -132,7 +183,14 @@ function resetConversation() {
                 )}
             </h3>
           <p style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>{result.answer}</p>
-
+          <button type="button" onClick={speakAnswer} style={{ padding: "0.4rem 0.8rem", marginBottom: "0.5rem" }}>
+            {speaking ? "Stop" : "Listen"}
+          </button>
+          {voiceMissing && (
+            <p style={{ fontSize: "0.85em", color: "#888" }}>
+              No voice for this language is installed on this device.
+            </p>
+          )}
           <h4>Sources</h4>
           <ul>
             {result.sources.map((s, i) => (
