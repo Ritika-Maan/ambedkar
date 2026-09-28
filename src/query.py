@@ -16,7 +16,7 @@ if not GROQ_API_KEY:
         "(get a free key at https://console.groq.com/keys)"
     )
 
-client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
+client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1", timeout=10.0, max_retries=0)
 GROQ_MODEL = "openai/gpt-oss-20b"  # Groq's current free-tier catalog (llama-3.3 was deprecated); use openai/gpt-oss-120b for higher quality
 
 MODE_PROMPTS = {
