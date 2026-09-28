@@ -59,6 +59,12 @@ async function handleAsk(e) {
     setLoading(false);
   }
 }
+function resetConversation() {
+  setHistory([]);
+  setResult(null);
+  setError(null);
+  setQuestion("");
+}
 
   return (
     <div style={{ maxWidth: 700, margin: "0 auto" }}>
@@ -107,6 +113,7 @@ async function handleAsk(e) {
           {loading ? (slow ? "Still thinking... (archive is slow right now)" : "Thinking...") : "Ask"}
         </button>
       </form>
+      <button type="button" onClick={resetConversation} style={{ padding: "0.6rem" }}>New conversation</button>
 
       {error && (
         <p style={{ color: "#b00020", marginTop: "1rem" }}>
