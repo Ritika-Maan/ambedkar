@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useState, useEffect, useCallback } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const API_BASE = "http://localhost:8000";
 
@@ -8,11 +8,20 @@ const API_BASE = "http://localhost:8000";
 const fieldStyle = { padding: "0.6rem", minHeight: 44, fontSize: "1rem" };
 const btnStyle = { padding: "0.6rem 1rem", minHeight: 44, fontWeight: 600, cursor: "pointer" };
 
-export default function DebatesPage() {
-  const [date, setDate] = useState("");
-  const [volume, setVolume] = useState("");
-  const [topic, setTopic] = useState("");
-  const [article, setArticle] = useState("");
+function DebatesPageInner() {
+  const searchParams = useSearchParams();
+
+  // Seed filters from the incoming URL on first load, so links from the
+  // graph (?theme=..., ?date=..., ?volume=...) and any direct ?topic=...
+  // or ?article=... link land pre-filled. `topic` wins over `theme` when
+  // both are present -- `theme` is Shreya's graph param name, `topic` is
+  // the Debates Explorer's own name for the same filter.
+  const [date, setDate] = useState(() => searchParams.get("date") || "");
+  const [volume, setVolume] = useState(() => searchParams.get("volume") || "");
+  const [topic, setTopic] = useState(
+    () => searchParams.get("topic") || searchParams.get("theme") || ""
+  );
+  const [article, setArticle] = useState(() => searchParams.get("article") || "");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [results, setResults] = useState(null);
@@ -78,7 +87,10 @@ const handleSearch = useCallback(async (e) => {
   }
 }, [date, volume, topic, article]);
 
-  // Load everything once on mount so the Explorer isn't blank on arrival.
+  // Runs once on mount. Since date/volume/topic/article are already seeded
+  // from the URL above (if present), this single call both (a) loads
+  // everything by default when there's no query string, and (b) auto-runs
+  // the search for graph deep links -- no separate effect needed.
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
     handleSearch();
@@ -199,5 +211,16 @@ const handleSearch = useCallback(async (e) => {
         </>
       )}
     </div>
+  );
+}
+
+// useSearchParams() requires a Suspense boundary in the App Router, or the
+// production build fails during prerendering (same issue as /ask). This
+// wrapper is the only reason DebatesPageInner isn't the default export.
+export default function DebatesPage() {
+  return (
+    <Suspense fallback={<div style={{ maxWidth: 800, margin: "0 auto" }}>Loading…</div>}>
+      <DebatesPageInner />
+    </Suspense>
   );
 }
