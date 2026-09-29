@@ -25,11 +25,14 @@ export interface Message {
 export interface Source {
   id: string;
   title: string;
-  type: 'book' | 'speech' | 'debate' | 'document' | 'photograph';
+  type: string;
   year?: string;
+  date?: string;
   volume?: string;
   page?: string;
+  section?: string | number;
   excerpt?: string;
+  snippet?: string;
   url?: string;
 }
 

@@ -38,6 +38,12 @@ export default defineConfig(({ mode }) => {
       watch: {
         ignored: ["**/.figma/**"],
       },
+      proxy: {
+        "/ask": "http://localhost:8000",
+        "/compare": "http://localhost:8000",
+        "/debates-search": "http://localhost:8000",
+        "/graph-data": "http://localhost:8000",
+      },
     },
     preview: {
       host: process.env.FIGMA_DEV_SERVER_HOST || "0.0.0.0",

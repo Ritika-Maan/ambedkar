@@ -91,20 +91,31 @@ export default function Debates({ onAskWithContext }: Props) {
   const doSearch = async () => {
     setLoading(true);
     try {
+      const activeTopic = query.trim() || (selectedTopic !== 'All Topics' ? selectedTopic : '');
       const params = new URLSearchParams({
-        q: query,
+        ...(activeTopic && { topic: activeTopic }),
         ...(selectedVolume && { volume: selectedVolume }),
-        ...(selectedTopic !== 'All Topics' && { topic: selectedTopic }),
-        ...(dateFrom && { from: dateFrom }),
-        ...(dateTo && { to: dateTo }),
       });
       const res = await fetch(`/debates-search?${params}`);
       if (res.ok) {
         const data = await res.json();
-        setResults(data.results || SAMPLE_DEBATES);
+        if (data.results && data.results.length > 0) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const mapped: DebateResult[] = data.results.map((r: any) => ({
+            id: r.id || crypto.randomUUID(),
+            date: r.date || 'Constituent Assembly',
+            volume: r.volume ? `Volume ${r.volume}` : 'Constituent Assembly',
+            topic: r.title || 'Debate Speech',
+            speaker: 'Dr. B. R. Ambedkar',
+            assembly: 'Constituent Assembly of India',
+            excerpt: r.snippet || '',
+          }));
+          setResults(mapped);
+          return;
+        }
       }
     } catch {
-      // API not available — use sample data
+      // API not available — fallback to sample data filtering
     } finally {
       setLoading(false);
     }

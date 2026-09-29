@@ -269,28 +269,28 @@ export default function Compare() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             <div>
               <label className="museum-label block mb-2" htmlFor="compare-a" style={{ fontSize: '0.55rem' }}>
-                Period A
+                Period A / Date
               </label>
               <input
                 id="compare-a"
                 type="text"
                 value={periodA}
                 onChange={(e) => setPeriodA(e.target.value)}
-                placeholder="e.g. 1946–1948"
+                placeholder="e.g. 1948-11-04"
                 className="w-full px-3 py-2.5 bg-transparent outline-none"
                 style={{ ...inputStyle, ...mono, fontSize: '0.8rem' }}
               />
             </div>
             <div>
               <label className="museum-label block mb-2" htmlFor="compare-b" style={{ fontSize: '0.55rem' }}>
-                Period B
+                Period B / Date
               </label>
               <input
                 id="compare-b"
                 type="text"
                 value={periodB}
                 onChange={(e) => setPeriodB(e.target.value)}
-                placeholder="e.g. 1949–1950"
+                placeholder="e.g. 1949-11-25"
                 className="w-full px-3 py-2.5 bg-transparent outline-none"
                 style={{ ...inputStyle, ...mono, fontSize: '0.8rem' }}
               />

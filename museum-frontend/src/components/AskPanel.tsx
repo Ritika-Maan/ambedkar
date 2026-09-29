@@ -70,13 +70,15 @@ function ThinkingDots() {
 }
 
 function SourceCard({ source }: { source: Source }) {
+  const displayYear = source.year || source.date;
+  const displayExcerpt = source.excerpt || source.snippet;
   return (
     <div
       className="p-3 cursor-pointer group transition-colors duration-200"
       style={{ background: 'var(--bg2)', border: '1px solid var(--ac-border)' }}
     >
       <div
-        className="text-xs mb-1 flex items-center gap-2"
+        className="text-xs mb-1 flex items-center gap-2 flex-wrap"
         style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem' }}
       >
         <span
@@ -89,11 +91,17 @@ function SourceCard({ source }: { source: Source }) {
         >
           {source.type.toUpperCase()}
         </span>
-        {source.year && (
-          <span style={{ color: 'var(--cream-35)' }}>{source.year}</span>
+        {displayYear && (
+          <span style={{ color: 'var(--cream-35)' }}>{displayYear}</span>
+        )}
+        {source.volume && (
+          <span style={{ color: 'var(--cream-35)' }}>Vol. {source.volume}</span>
         )}
         {source.page && (
           <span style={{ color: 'var(--cream-35)' }}>p.{source.page}</span>
+        )}
+        {source.section != null && source.section !== '' && (
+          <span style={{ color: 'var(--cream-35)' }}>Sec. {source.section}</span>
         )}
       </div>
       <div
@@ -102,12 +110,12 @@ function SourceCard({ source }: { source: Source }) {
       >
         {source.title}
       </div>
-      {source.excerpt && (
+      {displayExcerpt && (
         <p
           className="text-xs leading-relaxed"
           style={{ color: 'var(--cream-5)', fontStyle: 'italic', fontSize: '0.75rem' }}
         >
-          "{source.excerpt.slice(0, 100)}…"
+          "{displayExcerpt.slice(0, 100)}…"
         </p>
       )}
     </div>
@@ -165,22 +173,38 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
     setMessages((prev) => [...prev, userMsg, loadingMsg]);
     setLoading(true);
 
+    const fullQuestion = context
+      ? `[Exploring: ${context.title}${context.section ? ' (' + context.section + ')' : ''}] ${question}`
+      : question;
+
     try {
       const res = await fetch('/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          question,
+          question: fullQuestion,
           mode,
-          language: lang,
-          searchIn,
-          context: context ?? undefined,
+          lang,
+          corpus: searchIn,
         }),
       });
 
       const data = await res.json();
       const answer = data.answer || data.response || "I couldn't find a specific answer in the archive. Please try rephrasing or exploring related topics.";
-      const sources: Source[] = data.sources || [];
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const rawSources = data.sources || [];
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const sources: Source[] = rawSources.map((s: any, idx: number) => ({
+        id: `source-${idx}`,
+        title: s.title || 'Untitled Source',
+        type: s.type || 'source_text',
+        date: s.date,
+        year: s.date,
+        volume: s.volume,
+        section: s.section,
+        excerpt: s.snippet || s.text || '',
+        snippet: s.snippet,
+      }));
 
       setMessages((prev) =>
         prev.map((m) =>
