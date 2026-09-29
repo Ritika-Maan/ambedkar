@@ -91,6 +91,103 @@ const SCALE = 0.65;
 const OFFSET_X = 500;
 const OFFSET_Y = 380;
 
+type BackendNode = {
+  id: string;
+  label: string;
+  type: 'person' | 'theme' | 'institution' | 'writing' | 'intervention';
+  description?: string;
+  date?: string;
+  volume?: string;
+};
+type BackendEdge = {
+  source: string;
+  target: string;
+  relationship: string;
+};
+const BACKEND_TYPE_MAP: Record<BackendNode['type'], GraphNode['type']> = {
+  person: 'person',
+  theme: 'theme',
+  institution: 'institution',
+  writing: 'writing',
+  intervention: 'event',
+};
+
+function layoutBackendGraph(nodes: BackendNode[], edges: BackendEdge[]): { nodes: GraphNode[]; edges: GraphEdge[] } {
+  const degree = new Map<string, number>();
+  edges.forEach((e) => {
+    degree.set(e.source, (degree.get(e.source) || 0) + 1);
+    degree.set(e.target, (degree.get(e.target) || 0) + 1);
+  });
+
+  const hub = nodes
+    .filter((n) => n.type === 'person')
+    .sort((a, b) => (degree.get(b.id) || 0) - (degree.get(a.id) || 0))[0];
+
+  const positions = new Map<string, { x: number; y: number }>();
+  if (hub) positions.set(hub.id, { x: 0, y: 0 });
+
+  const groups: Record<string, BackendNode[]> = {};
+  nodes.forEach((n) => {
+    if (n.id === hub?.id) return;
+    (groups[n.type] ||= []).push(n);
+  });
+  Object.values(groups).forEach((g) => g.sort((a, b) => (degree.get(b.id) || 0) - (degree.get(a.id) || 0)));
+
+  const sectorOrder: BackendNode['type'][] = ['institution', 'theme', 'writing', 'person', 'intervention'];
+  const weights = sectorOrder.map((t) => Math.sqrt((groups[t]?.length || 0) || 1));
+  const totalWeight = weights.reduce((a, b) => a + b, 0);
+
+  const RING_GAP = 110;
+  const BASE_RADIUS = 150;
+
+  let angleCursor = 0;
+  sectorOrder.forEach((type, sIdx) => {
+    const group = groups[type] || [];
+    const span = (weights[sIdx] / totalWeight) * 2 * Math.PI;
+    const sectorStart = angleCursor;
+    angleCursor += span;
+    if (group.length === 0) return;
+
+    let idx = 0;
+    let ring = 0;
+    while (idx < group.length) {
+      const radius = BASE_RADIUS + ring * RING_GAP;
+      const ringCapacity = Math.max(3, Math.floor((span * radius) / 55));
+      const countThisRing = Math.min(ringCapacity, group.length - idx);
+      for (let i = 0; i < countThisRing; i++) {
+        const angle = sectorStart + ((i + 0.5) / countThisRing) * span;
+        const n = group[idx];
+        positions.set(n.id, { x: Math.cos(angle) * radius, y: Math.sin(angle) * radius });
+        idx++;
+      }
+      ring++;
+    }
+  });
+
+  const graphNodes: GraphNode[] = nodes.map((n) => {
+    const pos = positions.get(n.id) || { x: 0, y: 0 };
+    const deg = degree.get(n.id) || 1;
+    return {
+      id: n.id,
+      label: n.label,
+      sublabel: [n.date, n.volume ? `Vol. ${n.volume}` : ''].filter(Boolean).join(' · ') || undefined,
+      type: BACKEND_TYPE_MAP[n.type] || 'theme',
+      x: pos.x,
+      y: pos.y,
+      size: n.id === hub?.id ? 28 : Math.min(9 + deg * 1.1, 20),
+    };
+  });
+
+  const graphEdges: GraphEdge[] = edges.map((e, i) => ({
+    id: `be${i}`,
+    source: e.source,
+    target: e.target,
+    strength: e.relationship === 'authored' ? 3 : e.relationship?.includes('intervened') ? 2 : 1,
+  }));
+
+  return { nodes: graphNodes, edges: graphEdges };
+}
+
 export default function KnowledgeGraph({ onAskWithContext }: Props) {
   const [selected, setSelected] = useState<GraphNode | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -101,14 +198,17 @@ export default function KnowledgeGraph({ onAskWithContext }: Props) {
   const dragging = useRef(false);
   const lastMouse = useRef({ x: 0, y: 0 });
 
+
   useEffect(() => {
-    fetch('/graph-data')
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.nodes?.length) setGraphData(data);
-      })
-      .catch(() => {/* use static data */});
-  }, []);
+  fetch('http://localhost:8000/graph-data')
+    .then((r) => r.json())
+    .then((data) => {
+      if (data.nodes?.length) {
+        setGraphData(layoutBackendGraph(data.nodes, data.edges || []));
+      }
+    })
+    .catch(() => {/* use static data */});
+}, []);
 
   const toSvgX = (x: number) => x * SCALE + OFFSET_X + pan.x;
   const toSvgY = (y: number) => y * SCALE + OFFSET_Y + pan.y;
@@ -293,16 +393,18 @@ export default function KnowledgeGraph({ onAskWithContext }: Props) {
                     )}
 
                     {/* Label */}
-                    <text
-                      y={r + 16}
-                      textAnchor="middle"
-                                            fontSize={node.size > 20 ? 11 : 9}
-                      fontFamily="DM Mono, monospace"
-                      fontWeight={isSelected ? 500 : 300}
-                      style={{ fill: isSelected || isHovered ? 'var(--cream-full)' : 'var(--cream-55)', transition: 'fill 0.2s ease', pointerEvents: 'none' }}
-                    >
-                      {node.label.length > 18 ? node.label.slice(0, 16) + '…' : node.label}
-                    </text>
+                    {(zoom>1.3 || isSelected || isHovered) && (
+                      <text
+                       y={r + 16}
+                       textAnchor="middle"
+                       fontSize={node.size > 20 ? 11 : 9}
+                       fontFamily="DM Mono, monospace"
+                       fontWeight={isSelected ? 500 : 300}
+                       style={{ fill: isSelected || isHovered ? 'var(--cream-full)' : 'var(--cream-55)', transition: 'fill 0.2s ease', pointerEvents: 'none' }}
+                       >
+                        {node.label.length > 18 ? node.label.slice(0, 16) + '…' : node.label}
+                      </text>
+                    )}
                   </g>
                 );
               })}
@@ -376,7 +478,7 @@ export default function KnowledgeGraph({ onAskWithContext }: Props) {
               >
                 <div className="museum-label mb-2" style={{ fontSize: '0.55rem' }}>Connected Nodes</div>
                 <div className="flex flex-col gap-1.5">
-                  {EDGES
+                  {graphData.edges
                     .filter((e) => e.source === selected.id || e.target === selected.id)
                     .map((edge) => {
                       const otherId = edge.source === selected.id ? edge.target : edge.source;

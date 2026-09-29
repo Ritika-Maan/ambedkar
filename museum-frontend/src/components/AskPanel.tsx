@@ -100,10 +100,24 @@ function SourceCard({ source }: { source: Source }) {
         {source.page && (
           <span style={{ color: 'var(--cream-35)' }}>p.{source.page}</span>
         )}
-        {source.section != null && source.section !== '' && (
+                {source.section != null && source.section !== '' && (
           <span style={{ color: 'var(--cream-35)' }}>Sec. {source.section}</span>
         )}
+        {source.relevance && (
+          <span
+            style={{
+              color:
+                source.relevance === 'high' ? '#8fbf7f' :
+                source.relevance === 'medium' ? '#c4a35a' :
+                'var(--cream-35)',
+              textTransform: 'uppercase',
+            }}
+          >
+            {source.relevance}
+          </span>
+        )}
       </div>
+
       <div
         className="text-xs font-medium mb-1"
         style={{ color: 'var(--fg1)', fontFamily: 'Source Sans 3, sans-serif', fontSize: '0.8rem' }}
@@ -133,6 +147,7 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
   const [showSources, setShowSources] = useState(false);
   const [activeSources, setActiveSources] = useState<Source[]>([]);
   const [listening, setListening] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -191,6 +206,7 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
 
       const data = await res.json();
       const answer = data.answer || data.response || "I couldn't find a specific answer in the archive. Please try rephrasing or exploring related topics.";
+      const cached = !!data.cached;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const rawSources = data.sources || [];
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -202,6 +218,7 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
         year: s.date,
         volume: s.volume,
         section: s.section,
+        relevance: s.relevance,
         excerpt: s.snippet || s.text || '',
         snippet: s.snippet,
       }));
@@ -209,7 +226,7 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
       setMessages((prev) =>
         prev.map((m) =>
           m.loading
-            ? { ...m, content: answer, sources, loading: false }
+            ? { ...m, content: answer, sources, cached, loading: false }
             : m
         )
       );
@@ -225,7 +242,11 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
         const langMap: Record<AskLang, string> = { en: 'en-US', hi: 'hi-IN', mr: 'mr-IN', ta: 'ta-IN' };
         utt.lang = langMap[lang];
         utt.rate = 0.9;
+        utt.onstart = () => setSpeaking(true);
+        utt.onend = () => setSpeaking(false);
+        utt.onerror = () => setSpeaking(false);
         window.speechSynthesis.cancel();
+        setSpeaking(true);
         window.speechSynthesis.speak(utt);
       }
     } catch {
@@ -269,6 +290,10 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
   const stopVoice = () => {
     recognitionRef.current?.stop();
     setListening(false);
+  };
+  const stopSpeaking = () => {
+    window.speechSynthesis.cancel();
+    setSpeaking(false);
   };
 
   const clearHistory = () => {
@@ -533,6 +558,18 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
                         </svg>
                       </div>
                       ASK AMBEDKAR
+                      {msg.cached && (
+                        <span
+                          style={{
+                            marginLeft: '0.4rem',
+                            padding: '1px 6px',
+                            background: 'rgba(143,191,127,0.15)',
+                            color: '#8fbf7f',
+                          }}
+                        >
+                          CACHED
+                        </span>
+                      )}
                     </div>
                     {msg.loading ? (
                       <ThinkingDots />
@@ -629,6 +666,20 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
               }}
             />
             <div className="flex items-center gap-2">
+              {/* Stop speaking */}
+              {speaking && (
+                <button
+                  onClick={stopSpeaking}
+                  className="p-1.5 transition-colors"
+                  title="Stop speaking"
+                  style={{ color: '#c4a35a' }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                    <rect x="3" y="3" width="8" height="8" />
+                  </svg>
+                </button>
+              )}
+
               {/* Voice input */}
               <button
                 onClick={listening ? stopVoice : startVoice}
