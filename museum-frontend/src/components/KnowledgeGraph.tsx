@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import type { GraphNode, GraphEdge, AskContext } from '../types';
+import { API_BASE } from '../config';
 
 interface Props {
   onAskWithContext: (ctx: AskContext) => void;
@@ -200,7 +201,8 @@ export default function KnowledgeGraph({ onAskWithContext }: Props) {
 
 
   useEffect(() => {
-  fetch('http://localhost:8000/graph-data')
+    
+    fetch(`${API_BASE}/graph-data`)
     .then((r) => r.json())
     .then((data) => {
       if (data.nodes?.length) {

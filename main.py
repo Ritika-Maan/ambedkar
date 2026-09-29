@@ -56,6 +56,16 @@ def debug():
     return {"debates_count": debates_collection.count()}
 import hashlib
 _cache = {}
+import threading
+
+def _warmup():
+    try:
+        debates_collection.query(query_texts=["warmup"], n_results=1)
+        print("[warmup] embedding model ready")
+    except Exception as e:
+        print(f"[warmup] failed: {e}")
+
+threading.Thread(target=_warmup, daemon=True).start()
 
 def _cache_key(question, mode, corpus, n_results, history=None, lang="en"):
     raw = f"{question.strip().lower()}|{mode}|{corpus}|{n_results}|{history or []}|{lang}"

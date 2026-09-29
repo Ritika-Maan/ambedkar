@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import type { Message, AskContext, AskMode, AskLang, SearchIn, Source } from '../types';
+import { API_BASE } from '../config';
 
 interface Props {
   isOpen: boolean;
@@ -193,7 +194,7 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
       : question;
 
     try {
-      const res = await fetch('/ask', {
+      const res = await fetch(`${API_BASE}/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -249,7 +250,8 @@ export default function AskPanel({ isOpen, context, onClose, variant = 'panel' }
         setSpeaking(true);
         window.speechSynthesis.speak(utt);
       }
-    } catch {
+    } catch(err) {
+      console.error('ask failed:', err, 'API_BASE =', API_BASE);
       setMessages((prev) =>
         prev.map((m) =>
           m.loading

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { DebateResult, AskContext } from '../types';
+import { API_BASE } from '../config';
 
 interface Props {
   onAskWithContext: (ctx: AskContext) => void;
@@ -96,7 +97,8 @@ export default function Debates({ onAskWithContext }: Props) {
         ...(activeTopic && { topic: activeTopic }),
         ...(selectedVolume && { volume: selectedVolume }),
       });
-      const res = await fetch(`/debates-search?${params}`);
+      
+      const res = await fetch(`${API_BASE}/debates-search?${params}`);
       if (res.ok) {
         const data = await res.json();
         if (data.results && data.results.length > 0) {
