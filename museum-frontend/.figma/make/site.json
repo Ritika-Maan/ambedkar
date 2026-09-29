@@ -1,0 +1,10 @@
+{
+  "description": "Explore an immersive digital museum dedicated to Dr. B. R. Ambedkar, featuring interactive exhibits, archival documents, and an AI guide for deeper understanding.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
