@@ -208,6 +208,11 @@ Vite embeds environment variables at build time, so redeploy after changing `VIT
 
 **Ritika Maan**  
 GitHub: [@Ritika-Maan](https://github.com/Ritika-Maan)
+**Priya Prakash**
+**Shreya Singh**
+**Niyati**
+**Namya Jain**
+**Nalini Bharadwaj**
 
 ## License
 
