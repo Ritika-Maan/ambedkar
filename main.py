@@ -18,6 +18,7 @@ app = FastAPI(title="Ask Ambedkar API", version="0.1.0")
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://localhost:8443/",
 ]
 app.add_middleware(
     CORSMiddleware,
