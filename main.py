@@ -12,21 +12,22 @@ sys.path.insert(0, os.path.dirname(__file__))
 from src.query import ask  # reuses the exact same ask() tested in the console
 
 app = FastAPI(title="Ask Ambedkar API", version="0.1.0")
-
+from src.ingest_interventions import ingest_all as ingest_debates
+ingest_debates()
+try:
+    from ingest_writings import ingest_all as ingest_writings_all
+    ingest_writings_all()
+except Exception as e:
+    print(f"[startup] writings ingestion skipped: {e}")
 # Only the frontend origins we actually use. If the kiosk tablet opens the app
 # via the laptop's IP, add "http://<laptop-ip>:3000" to this list.
-ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:8443/",
-]
+ALLOWED_ORIGINS =["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 class AskRequest(BaseModel):
     question: str = Field(..., min_length=1, description="User's question")
     mode: Literal["student", "scholar", "constitutional"] = "student"
@@ -57,7 +58,9 @@ class AskResponse(BaseModel):
 @app.get("/")
 def health():
     return {"status": "ok", "service": "ask-ambedkar"}
-
+@app.get("/debug")
+def debug():
+    return {"debates_count": debates_collection.count()}
 import hashlib
 _cache = {}
 
