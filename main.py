@@ -12,13 +12,6 @@ sys.path.insert(0, os.path.dirname(__file__))
 from src.query import ask  # reuses the exact same ask() tested in the console
 
 app = FastAPI(title="Ask Ambedkar API", version="0.1.0")
-from src.ingest_interventions import ingest_all as ingest_debates
-ingest_debates()
-try:
-    from ingest_writings import ingest_all as ingest_writings_all
-    ingest_writings_all()
-except Exception as e:
-    print(f"[startup] writings ingestion skipped: {e}")
 # Only the frontend origins we actually use. If the kiosk tablet opens the app
 # via the laptop's IP, add "http://<laptop-ip>:3000" to this list.
 ALLOWED_ORIGINS =["*"]
